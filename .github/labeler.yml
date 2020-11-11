@@ -1,2 +1,8 @@
-"good first issue":
-- any: ['src/**/*.css']
+documentation:
+  - any: ['**/*.md']
+dependencies:
+  - 'package.json'
+permission:
+  - any: ['src/schema/Permission/**/*.*']
+"BrP dependency":
+  - any: ['src/__generated__/**/*.ts']
