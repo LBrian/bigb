@@ -1,2 +1,4 @@
 - regExp: ".*\\.md+$"
   labels: ["enhancement"]
+- regExp: "src/.*\\.js+$"
+  labels: ["bug"]
