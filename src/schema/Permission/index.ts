@@ -1,1 +1,1 @@
-consloe.info()
+consloe.error()
