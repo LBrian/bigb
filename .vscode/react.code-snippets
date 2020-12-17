@@ -1,0 +1,23 @@
+{
+  /******* Code snippet *********/
+  "React Component with props": {
+    "prefix": ["imr"],
+    "body": [
+      "import React from \"react\"",
+      "",
+      "interface ${TM_FILENAME_BASE}Props {",
+      "",
+      "}",
+      "",
+      "const $TM_FILENAME_BASE = ({}: ${TM_FILENAME_BASE}Props) => {",
+      "",
+      "\treturn (",
+      "\t\t<>${0}</>",
+      "\t);",
+      "};",
+      "",
+      "export default $TM_FILENAME_BASE"
+    ],
+    "description": "React Component with props"
+  }
+}
