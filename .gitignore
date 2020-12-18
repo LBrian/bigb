@@ -14,5 +14,6 @@
 
 # Firebase
 .Firebase
+hosting.*
 
 .eslintcache
