@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { About, Header } from "./Components";
+import { Main, Header } from "./Components";
 
 const App = () => {
   return (
@@ -10,11 +10,8 @@ const App = () => {
         <Header />
         <div className="flex-1">
           <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
             <Route path="/">
-              <span>Im a frontend/React/JS developer, more to come...</span>
+              <Main />
             </Route>
           </Switch>
         </div>

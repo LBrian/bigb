@@ -1,18 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 interface HeaderProps {}
 
 const Header = (prop: HeaderProps) => {
   return (
-    <header className="bg-blue-gray h-16 text-white">
-      <nav>
-        <ul>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
+    <header className="h-16 sticky shadow-lg px-6 flex items-center font-sans">
+      <div className="flex-1 text-xl font-bold whitespace-nowrap text-center sm:text-left">
+        Brian Yueh-Peng Liu
+      </div>
     </header>
   );
 };
