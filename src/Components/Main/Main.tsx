@@ -8,8 +8,8 @@ const Main = (props: MainProps) => {
       <div className="inline-block">
         <img src="avatar.png" alt="brian" />
       </div>
-      <div className="text-5xl font-semibold mt-10 text-blue-gray">
-        Im a frontned developer
+      <div className="text-5xl font-semibold mt-10">
+        Im a frontend developer
       </div>
     </div>
   );
