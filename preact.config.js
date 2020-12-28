@@ -9,6 +9,9 @@ module.exports = (config, env, helpers) => {
     plugins.unshift(require('autoprefixer'));
   });
 
+  // Modules import resolving paths
+  config.resolve.modules.push('src/');
+
   // Override contentBase due to asset folder structure is different between Preact/React
   config.devServer.contentBase = `${env.cwd}/public`;
 

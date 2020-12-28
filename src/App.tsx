@@ -3,7 +3,7 @@ import 'wired-elements';
 import { useState } from 'preact/hooks';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Main, Header } from './Components';
+import { Main, Header } from 'Layout';
 
 const LOCAL_STORAGE_KEYS = {
   darkMode: 'bigb/darkMode',
