@@ -1,10 +1,12 @@
 {
-  "short_name": "Brian Liu",
-  "name": "Brian Liu - A frontend developer's backyard",
-  "start_url": "",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#1E293B",
+  "short_name": "Brian Liu",
+  "name": "Brian Yueh-peng Liu",
   "background_color": "#ffffff",
+  "categories": ["profile", "frontend", "javascript", "developer", "engineer"],
+  "description": "A frontend developer, Brian Liu, backyard for you to get to know me.",
   "icons": [
     {
       "src": "favicon.ico",
