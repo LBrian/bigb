@@ -1,12 +1,12 @@
-import React from "react";
-import "wired-elements";
-import { useState } from "preact/hooks";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from 'react';
+import 'wired-elements';
+import { useState } from 'preact/hooks';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Main, Header } from "./Components";
+import { Main, Header } from './Components';
 
 const LOCAL_STORAGE_KEYS = {
-  darkMode: "bigb/darkMode",
+  darkMode: 'bigb/darkMode',
 };
 
 const AppContext = React.createContext({
@@ -27,21 +27,19 @@ const App = () => {
           setDarkMode(!darkMode);
           localStorage.setItem(
             LOCAL_STORAGE_KEYS.darkMode,
-            !darkMode ? "1" : ""
+            !darkMode ? '1' : ''
           );
         },
-      }}
-    >
+      }}>
       <Router>
         <div
           className={`flex flex-col ${
-            darkMode ? "bg-blue-gray text-white" : "text-blue-gray"
-          }`}
-        >
+            darkMode ? 'bg-blue-gray text-white' : 'text-blue-gray'
+          }`}>
           <Header />
-          <div className="flex-1">
+          <div className='flex-1'>
             <Switch>
-              <Route path="/">
+              <Route path='/'>
                 <Main />
               </Route>
             </Switch>

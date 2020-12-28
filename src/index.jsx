@@ -1,18 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, {render} from 'preact';
 
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+let root;
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function init() {
+	// 3rd parameter root to indicate which DOM to replace
+	root = render(<App />, document.body, root);
+}
+
+// HMR declaration for preact
+if (module.hot) {
+	// turn this on if you want to enable React DevTools!
+	// require('preact/devtools');
+
+	module.hot.accept('./App', () => requestAnimationFrame(init) );
+}
+
+init();
