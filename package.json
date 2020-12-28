@@ -67,6 +67,15 @@
     "preact-cli": "^3.0.5",
     "prettier": "^2.2.1"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint"
+    ],
+    "*.{ts,tsx,json,js}": [
+      "npx prettier --write",
+      "git add"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged --concurrent false"
