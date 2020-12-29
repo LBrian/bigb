@@ -21,8 +21,8 @@ body.dark [class*=' shadow'] {
 }
 
 :root {
-  --wired-toggle-off-color: #282a36;
-  --wired-toggle-on-color: #f8f8f2;
+  --wired-toggle-off-color: #44475a;
+  --wired-toggle-on-color: #50fa7b;
 }
 
 @tailwind base;
