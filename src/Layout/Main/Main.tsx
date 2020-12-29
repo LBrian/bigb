@@ -1,25 +1,11 @@
 import React from 'react';
 
-interface MainProps {}
+import { Intro } from 'Components';
 
-const Main = (props: MainProps) => {
+const Main = () => {
   return (
-    <div className='text-center py-20'>
-      <div className='mb-8'>
-        <img
-          src='avatar.png'
-          alt='brian'
-          className='m-auto'
-          height={240}
-          width={240}
-        />
-      </div>
-      <wired-card
-        fill='inherit'
-        elevation={6}
-        className='p-8 mx-8 sm:w-80 sm:mx-auto font-semibold relative'>
-        Hello, I&apos;m Brian. I love Javascript and everything frontend.
-      </wired-card>
+    <div className='py-20 px-6 sm:px-14 md:px-24 xl:px-60 font-sans'>
+      <Intro />
     </div>
   );
 };

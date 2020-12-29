@@ -1,6 +1,6 @@
 import React from 'react';
 import 'wired-elements';
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Main, Header } from 'Layout';
@@ -19,6 +19,14 @@ const App = () => {
     Boolean(localStorage.getItem(LOCAL_STORAGE_KEYS.darkMode))
   );
 
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   return (
     <AppContext.Provider
       value={{
@@ -31,21 +39,18 @@ const App = () => {
           );
         },
       }}>
-      <Router>
-        <div
-          className={`flex flex-col ${
-            darkMode ? 'bg-blue-gray text-white' : 'text-blue-gray'
-          }`}>
+      <div>
+        <div className='flex-1 overflow-y-auto'>
           <Header />
-          <div className='flex-1'>
+          <Router>
             <Switch>
               <Route path='/'>
                 <Main />
               </Route>
             </Switch>
-          </div>
+          </Router>
         </div>
-      </Router>
+      </div>
     </AppContext.Provider>
   );
 };

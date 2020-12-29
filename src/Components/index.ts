@@ -1,1 +1,2 @@
-export { default as Name } from './Name';
+export { default as Intro } from './Intro';
+export { default as ShieldsBadge, ShieldsBadges } from './ShieldsBadge';
