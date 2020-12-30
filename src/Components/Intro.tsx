@@ -27,7 +27,7 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
           I love building web applications from Javascript.
         </DraculaName>
       </div>
-      <div className='max-w-md text-justify font-light'>
+      <div className='sm:max-w-md text-justify font-light'>
         <DraculaString>
           I&apos;m a senior Front-End Engineer based in Sydney, NSW, Australia
           &#129432;. <DraculaNumber value={years} /> years professional
@@ -45,7 +45,7 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
           loading='lazy'
           width={280}
           height={280}
-          className={`duration-500 opacity-${
+          className={`m-auto sm:m-0 duration-500 opacity-${
             Math.round(observedRatio * 10) * 10
           }`}
         />
