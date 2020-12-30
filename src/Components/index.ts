@@ -1,5 +1,4 @@
+export { default as Card } from './Card';
 export { default as Intro } from './Intro';
-export { default as DraculaName } from './DraculaName';
-export { default as DraculaString } from './DraculaString';
-export { default as DraculaNumber } from './DraculaNumber';
+export { DraculaName, DraculaString, DraculaNumber } from './Dracula';
 export { default as ShieldsBadge, ShieldsBadges } from './ShieldsBadge';

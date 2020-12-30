@@ -11,13 +11,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body.dark {
+body header.sticky {
+  background: #f8f8f2;
+}
+
+body.dark,
+body.dark header.sticky {
   color: #f8f8f2;
   background: #282a36;
 }
 
-body.dark [class*=' shadow'] {
-  --tw-shadow: 0 10px 15px -3px #44475a, 0 4px 6px -2px #44475a;
+body.dark [class*='shadow'],
+body.dark .flip-card-content {
+  --tw-shadow: 0 10px 15px -3px #44475a, 0 4px 6px -2px #f8f8f2;
 }
 
 :root {
@@ -34,5 +40,36 @@ body.dark [class*=' shadow'] {
     .font-vt323 {
       font-family: 'VT323', monospace;
     }
+  }
+
+  .flip-card {
+    perspective: 900px;
+    @apply relative w-56 h-96 inline-block text-white;
+  }
+
+  .flip-card-content {
+    perspective: 900px;
+    animation: entry 1s linear 1;
+    transform: rotateX(60deg) scale(0.7);
+    @apply top-0 absolute w-full h-full shadow-2xl duration-500 rounded-md;
+  }
+
+  .flip-card-title {
+    letter-spacing: 2px;
+    text-shadow: 0px 4px 3px #44475a;
+    @apply font-mono mt-8 mb-1;
+  }
+
+  .flip-card-description {
+    letter-spacing: 1px;
+    @apply text-xs py-2 px-4;
+  }
+
+  .flip-card-content > img {
+    @apply w-32 h-32 mx-auto my-2;
+  }
+
+  .flip-card-content.in-view {
+    transform: rotate(0deg) scale(1);
   }
 }

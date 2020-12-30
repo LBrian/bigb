@@ -1,10 +1,13 @@
 import React, { HTMLAttributes } from 'react';
+import { useInView } from 'react-intersection-observer';
 
-import DraculaName from './DraculaName';
-import DraculaString from './DraculaString';
-import DraculaNumber from './DraculaNumber';
+import { DraculaName, DraculaString, DraculaNumber } from './Dracula';
 
 const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
+  const [ref, _, entry] = useInView({
+    threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+  });
+  const observedRatio = entry ? entry.intersectionRatio : 0;
   const careerStart = new Date('2005-05-01T00:00:00Z');
   const careerTimePeriod = new Date(
     new Date().getTime() - careerStart.getTime()
@@ -17,7 +20,7 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
       <div className='text-5xl xl:text-7xl font-extrabold pb-2'>
         <DraculaName className='mr-4'>Brian</DraculaName>
         <DraculaName className='mr-4 hidden sm:inline'>Yueh-Peng</DraculaName>
-        <DraculaName>Liu</DraculaName>.
+        <DraculaName>Liu.</DraculaName>
       </div>
       <div className='text-3xl lg:text-4xl xl:text-5xl font-bold opacity-50 pb-10'>
         <DraculaName>
@@ -31,8 +34,21 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
           experience in software across the continents shaped me with unique
           soft/hard skills and broaden vision. From Linux Sys Admin, SD, SDET,
           Back-End Developer and Data Mining academic level, now I specifically
-          love everything Javascript based.
+          love building web applications.
         </DraculaString>
+      </div>
+      <div className='flex mt-20'>
+        <img
+          ref={ref}
+          alt='avatar'
+          src='/avatar.png'
+          loading='lazy'
+          width={280}
+          height={280}
+          className={`duration-500 opacity-${
+            Math.round(observedRatio * 10) * 10
+          }`}
+        />
       </div>
     </div>
   );
