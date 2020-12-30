@@ -5,7 +5,9 @@ const DraculaNumber = ({
   className,
   ...props
 }: HTMLAttributes<HTMLSpanElement> & { value: number }) => (
-  <span className={`text-purple font-semibold ${className}`} {...props}>
+  <span
+    className={`text-purple font-semibold ${className ? className : ''}`}
+    {...props}>
     {Intl.NumberFormat(navigator.language).format(value)}
   </span>
 );

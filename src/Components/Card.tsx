@@ -13,7 +13,7 @@ const Card = ({
   children,
   bgColor = 'bg-purple',
 }: PropsWithChildren<CardsProps>) => {
-  const [ref, inView] = useInView({ threshold: 0.4 });
+  const [ref, inView] = useInView({ threshold: 0.7 });
 
   return (
     <div className='flip-card'>

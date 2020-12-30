@@ -12,7 +12,9 @@ const DraculaString = ({
 
   return (
     <span
-      className={`${darkMode ? 'text-yellow' : 'text-blue-gray'} ${className}`}
+      className={`${darkMode ? 'text-yellow' : 'text-blue-gray'} ${
+        className ? className : ''
+      }`}
       {...props}>
       {children}
     </span>

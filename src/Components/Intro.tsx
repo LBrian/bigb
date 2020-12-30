@@ -27,7 +27,7 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
           I love building web applications from Javascript.
         </DraculaName>
       </div>
-      <div className='sm:max-w-md text-justify font-light'>
+      <div className='md:max-w-2xl text-justify font-light md:text-lg'>
         <DraculaString>
           I&apos;m a senior Front-End Engineer based in Sydney, NSW, Australia
           &#129432;. <DraculaNumber value={years} /> years professional
@@ -40,12 +40,12 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
       <div className='flex mt-20'>
         <img
           ref={ref}
-          alt='avatar'
-          src='/avatar.png'
-          loading='lazy'
           width={280}
+          alt='avatar'
           height={280}
-          className={`m-auto sm:m-0 duration-500 opacity-${
+          loading='lazy'
+          src='/avatar.png'
+          className={`m-auto md:m-0 duration-500 opacity-${
             Math.round(observedRatio * 10) * 10
           }`}
         />
