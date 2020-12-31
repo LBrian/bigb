@@ -4,24 +4,30 @@ import { useInView } from 'react-intersection-observer';
 interface CardsProps {
   title: string;
   imageSrc?: string;
-  bgColor?: 'bg-orange' | 'bg-purple' | 'bg-pink';
+  threshold?: number;
+  bgColor?: 'bg-orange' | 'bg-purple' | 'bg-pink' | 'bg-red' | 'bg-blue-gray';
 }
 
 const Card = ({
   title,
   imageSrc,
   children,
-  bgColor = 'bg-purple',
+  threshold = 0.6,
+  bgColor = 'bg-blue-gray',
 }: PropsWithChildren<CardsProps>) => {
-  const [ref, inView] = useInView({ threshold: 0.7 });
+  const [ref, inView] = useInView({ threshold });
 
   return (
     <div className='flip-card'>
       <div
         ref={ref}
-        className={`flip-card-content ${bgColor} ${inView ? 'in-view' : ''}`}>
-        <img src={imageSrc} alt={title} />
-        <div className='text-center'>
+        className={`flip-card-content ${bgColor} ${
+          inView ? 'flip-card-in-view' : ''
+        }`}>
+        <div className='flip-card-image'>
+          <img src={imageSrc} alt={title} loading='lazy' />
+        </div>
+        <div className='flip-card-info'>
           <div className='flip-card-title'>{title}</div>
           <div className='flip-card-description'>{children}</div>
         </div>

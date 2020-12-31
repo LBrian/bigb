@@ -28,7 +28,7 @@ body.dark .flip-card-content {
 
 :root {
   --wired-toggle-off-color: #44475a;
-  --wired-toggle-on-color: #50fa7b;
+  --wired-toggle-on-color: #8be9fd;
 }
 
 @tailwind base;
@@ -43,6 +43,7 @@ body.dark .flip-card-content {
   }
 
   .flip-card {
+    height: 500px;
     perspective: 900px;
     @apply relative w-full md:w-96 inline-block text-white;
   }
@@ -51,26 +52,33 @@ body.dark .flip-card-content {
     perspective: 900px;
     animation: entry 1s linear 1;
     box-shadow: 0px 10px 40px #777;
-    transform: rotateX(60deg) scale(0.7);
-    @apply top-0 py-12 absolute w-full h-auto duration-500 rounded-md opacity-75;
+    transform: rotateX(45deg) scale(0.7);
+    @apply top-0 absolute w-full h-full duration-500 rounded-md opacity-75 flex flex-col overflow-hidden;
   }
 
-  .flip-card-content > img {
-    @apply w-32 h-32 mx-auto;
-  }
-
-  .flip-card-content.in-view {
+  .flip-card-content.flip-card-in-view {
     transform: rotate(0deg) scale(1);
   }
 
+  .flip-card-image {
+    @apply h-40;
+  }
+
+  .flip-card-image > img {
+    @apply h-full w-full object-cover;
+  }
+
+  .flip-card-info {
+    @apply text-center flex-1 overflow-hidden flex flex-col mt-10 mx-6;
+  }
+
   .flip-card-title {
-    letter-spacing: 2px;
     text-shadow: 0px 4px 3px #44475a;
-    @apply font-mono mt-10 mb-4 text-2xl;
+    @apply font-mono text-xl;
   }
 
   .flip-card-description {
     letter-spacing: 1px;
-    @apply mx-6 h-60 box-border overflow-y-auto;
+    @apply my-6 box-border overflow-y-auto;
   }
 }

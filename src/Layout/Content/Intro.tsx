@@ -1,13 +1,8 @@
 import React, { HTMLAttributes } from 'react';
-import { useInView } from 'react-intersection-observer';
 
-import { DraculaName, DraculaString, DraculaNumber } from './Dracula';
+import { DraculaName, DraculaString, DraculaNumber } from 'Components';
 
 const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
-  const [ref, _, entry] = useInView({
-    threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-  });
-  const observedRatio = entry ? entry.intersectionRatio : 0;
   const careerStart = new Date('2005-05-01T00:00:00Z');
   const careerTimePeriod = new Date(
     new Date().getTime() - careerStart.getTime()
@@ -39,15 +34,12 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
       </div>
       <div className='flex mt-20'>
         <img
-          ref={ref}
           width={280}
-          alt='avatar'
           height={280}
           loading='lazy'
           src='/avatar.png'
-          className={`m-auto md:m-0 duration-500 opacity-${
-            Math.round(observedRatio * 10) * 10
-          }`}
+          alt='Brian Liu avatar'
+          className='m-auto md:m-0 duration-500 opacity-80'
         />
       </div>
     </div>

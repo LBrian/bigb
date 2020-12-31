@@ -3,7 +3,7 @@ import 'wired-elements';
 import { useEffect, useState } from 'preact/hooks';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Main, Header } from 'Layout';
+import { Content, Header } from 'Layout';
 
 const LOCAL_STORAGE_KEYS = {
   darkMode: 'bigb/darkMode',
@@ -39,17 +39,15 @@ const App = () => {
           );
         },
       }}>
-      <div>
-        <div className='flex-1'>
-          <Header />
-          <Router>
-            <Switch>
-              <Route path='/'>
-                <Main />
-              </Route>
-            </Switch>
-          </Router>
-        </div>
+      <div className='flex-1'>
+        <Header />
+        <Router>
+          <Switch>
+            <Route path='/:topic?'>
+              <Content />
+            </Route>
+          </Switch>
+        </Router>
       </div>
     </AppContext.Provider>
   );

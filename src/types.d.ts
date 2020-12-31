@@ -6,6 +6,10 @@ import {
   WiredItem,
 } from 'wired-elements';
 
+export type RouterParams = {
+  topic?: string;
+};
+
 // TODO: Contribute this to community
 declare global {
   namespace JSX {
