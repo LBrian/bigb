@@ -31,7 +31,7 @@ const Section = ({
         <span className='font-vt323 text-pink mr-4 text-xl md:text-3xl font-bold'>
           &#60;&#47;&#62;
         </span>
-        <DraculaName className='font-extrabold text-4xl md:text-5xl'>
+        <DraculaName className='font-extrabold text-3xl sm:text-4xl md:text-5xl'>
           {title}
         </DraculaName>
       </div>
