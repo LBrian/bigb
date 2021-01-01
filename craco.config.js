@@ -1,15 +1,15 @@
 module.exports = {
   style: {
     postcss: {
-      plugins: [require('tailwindcss'), require('autoprefixer')],
-    },
+      plugins: [require('tailwindcss'), require('autoprefixer')]
+    }
   },
   webpack: {
     alias: {
       react: 'preact/compat',
       'react-dom': 'preact/compat',
-      'react-dom/test-utils': 'preact/test-utils',
-    },
+      'react-dom/test-utils': 'preact/test-utils'
+    }
   },
   babel: {
     plugins: [
@@ -18,9 +18,9 @@ module.exports = {
         {
           runtime: 'automatic',
           importSource: 'preact',
-          throwIfNamespace: false,
-        },
-      ],
-    ],
-  },
+          throwIfNamespace: false
+        }
+      ]
+    ]
+  }
 };

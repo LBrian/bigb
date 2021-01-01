@@ -42,6 +42,17 @@ body.dark .flip-card-content {
     }
   }
 
+  .cards {
+    @apply grid gap-8 md:justify-end;
+    grid-template-columns: 1fr;
+  }
+
+  @screen md {
+    .cards {
+      grid-template-columns: repeat(auto-fit, 24em);
+    }
+  }
+
   .flip-card {
     height: 500px;
     perspective: 900px;

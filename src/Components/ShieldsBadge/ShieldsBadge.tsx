@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 
 export interface ShieldsBadgeProps {
   label: string;
@@ -21,7 +21,12 @@ export interface ShieldsBadgeProps {
     | 'informational';
 }
 
-const ShieldsBadge = ({ label, value, color }: ShieldsBadgeProps) => {
+const ShieldsBadge = ({
+  label,
+  value,
+  color,
+  ...props
+}: ShieldsBadgeProps & HTMLAttributes<HTMLImageElement>) => {
   return (
     <img
       loading='lazy'
@@ -29,6 +34,7 @@ const ShieldsBadge = ({ label, value, color }: ShieldsBadgeProps) => {
       src={`https://img.shields.io/badge/${encodeURI(label)}-${encodeURI(
         value
       )}-${color}.svg`}
+      {...props}
     />
   );
 };

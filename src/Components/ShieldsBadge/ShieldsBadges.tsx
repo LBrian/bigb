@@ -11,11 +11,11 @@ const ShieldsBadges = ({
   HTMLAttributes<HTMLDivElement> & { badges?: ShieldsBadgeProps[] }
 >) => {
   return (
-    <div
-      className={`flex flex-wrap gap-4 p-4 ${className ? className : ''}`}
-      {...props}>
+    <div className={`flex flex-wrap ${className ? className : ''}`} {...props}>
       {badges
-        ? badges.map((props, index) => <ShieldsBadge key={index} {...props} />)
+        ? badges.map((badgeProps, index) => (
+            <ShieldsBadge key={index} {...badgeProps} className='mr-1 mb-1' />
+          ))
         : children}
     </div>
   );
