@@ -6,26 +6,6 @@ const Career = () => {
   return (
     <Section align='right' title='Where I worked'>
       <div className='cards'>
-        <Card
-          title='Senior Software Engineer'
-          imageSrc='yahoo.png'
-          bgColor='bg-purple'>
-          <ShieldsBadges
-            className='mb-2'
-            badges={[
-              { label: 'Java', value: 'n/a', color: 'blue' },
-              { label: 'igor', value: 'in house', color: 'blue' },
-              { label: 'yHudson', value: 'in house', color: 'blue' },
-              { label: 'scrum master', value: '10%', color: 'success' },
-              { label: 'developer', value: '90%', color: 'success' }
-            ]}
-          />
-          <ul className='list-disc list-inside text-left'>
-            <li>Yahoo e-commerce search engine team</li>
-            <li>Integrated machine learning models with search engine</li>
-            <li>Round-robin scrum master</li>
-          </ul>
-        </Card>
         <Card title='Front-end Engineer Team Lead' imageSrc='stackla.png'>
           <ShieldsBadges
             className='mb-2'
@@ -58,22 +38,6 @@ const Career = () => {
             <li>Stackla Design System</li>
           </ul>
         </Card>
-        <Card title='Front-end Engineer' imageSrc='line.png'>
-          <ShieldsBadges
-            className='mb-2'
-            badges={[
-              { label: 'backbone.js', value: '1.4.0', color: 'blue' },
-              { label: 'knockout.js', value: '3.4.2', color: 'blue' },
-              { label: 'javascript', value: 'es6', color: 'blue' },
-              { label: 'developer', value: '100%', color: 'success' }
-            ]}
-          />
-          <ul className='list-disc list-inside text-left'>
-            <li>1st &#x1F1EF;&#x1F1F5; oversea job offer</li>
-            <li>Kaggle Machine Learning tech sharing</li>
-            <li>Acquired Japanese language</li>
-          </ul>
-        </Card>
         <Card
           title='Senior React Front-end Engineer'
           imageSrc='tradeledger.jpg'>
@@ -104,23 +68,20 @@ const Career = () => {
             <li>Established Dev standards and docs</li>
           </ul>
         </Card>
-        <Card
-          title='Senior Software Engineer in Test'
-          imageSrc='trendmicro.jpg'
-          bgColor='bg-red'>
+        <Card title='Front-end Engineer' imageSrc='line.png'>
           <ShieldsBadges
             className='mb-2'
             badges={[
-              { label: 'python', value: 'n/a', color: 'blue' },
-              { label: 'ubuntu', value: 'n/a', color: 'blue' },
-              { label: 'selenium', value: 'n/a', color: 'blue' },
-              { label: 'team lead', value: '20%', color: 'success' },
-              { label: 'test developer', value: '80%', color: 'success' }
+              { label: 'backbone.js', value: '1.4.0', color: 'blue' },
+              { label: 'knockout.js', value: '3.4.2', color: 'blue' },
+              { label: 'javascript', value: 'es6', color: 'blue' },
+              { label: 'developer', value: '100%', color: 'success' }
             ]}
           />
           <ul className='list-disc list-inside text-left'>
-            <li>Early IoT concept project security in router</li>
-            <li>In-house test framework TMSTAF based on STAF by IBM</li>
+            <li>1st &#x1F1EF;&#x1F1F5; oversea job offer</li>
+            <li>Kaggle Machine Learning tech sharing</li>
+            <li>Acquired Japanese language</li>
           </ul>
         </Card>
         <Card title='Senior Full-stack Engineer' imageSrc='formac.png'>
@@ -138,6 +99,45 @@ const Career = () => {
             <li>1st &#x1F1EC;&#x1F1E7; oversea job offer</li>
             <li>Career turning point to front-end</li>
             <li>Data analysis in python</li>
+          </ul>
+        </Card>
+        <Card
+          title='Senior Software Engineer'
+          imageSrc='yahoo.png'
+          bgColor='bg-purple'>
+          <ShieldsBadges
+            className='mb-2'
+            badges={[
+              { label: 'Java', value: 'n/a', color: 'blue' },
+              { label: 'igor', value: 'in house', color: 'blue' },
+              { label: 'yHudson', value: 'in house', color: 'blue' },
+              { label: 'scrum master', value: '10%', color: 'success' },
+              { label: 'developer', value: '90%', color: 'success' }
+            ]}
+          />
+          <ul className='list-disc list-inside text-left'>
+            <li>Yahoo e-commerce search engine team</li>
+            <li>Integrated machine learning models with search engine</li>
+            <li>Round-robin scrum master</li>
+          </ul>
+        </Card>
+        <Card
+          title='Senior Software Engineer in Test'
+          imageSrc='trendmicro.jpg'
+          bgColor='bg-red'>
+          <ShieldsBadges
+            className='mb-2'
+            badges={[
+              { label: 'python', value: 'n/a', color: 'blue' },
+              { label: 'ubuntu', value: 'n/a', color: 'blue' },
+              { label: 'selenium', value: 'n/a', color: 'blue' },
+              { label: 'team lead', value: '20%', color: 'success' },
+              { label: 'test developer', value: '80%', color: 'success' }
+            ]}
+          />
+          <ul className='list-disc list-inside text-left'>
+            <li>Early IoT concept project security in router</li>
+            <li>In-house test framework TMSTAF based on STAF by IBM</li>
           </ul>
         </Card>
       </div>

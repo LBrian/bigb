@@ -90,6 +90,6 @@ body.dark .flip-card-content {
 
   .flip-card-description {
     letter-spacing: 1px;
-    @apply my-6 box-border overflow-y-auto;
+    @apply my-5 box-border overflow-y-auto;
   }
 }
