@@ -9,9 +9,6 @@
 # misc
 .DS_Store
 
-# Github
-.github/workflows
-
 # Firebase
 .Firebase
 hosting.*
