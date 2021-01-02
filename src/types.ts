@@ -3,7 +3,7 @@ import {
   WiredToggle,
   WiredCard,
   WiredListbox,
-  WiredItem,
+  WiredItem
 } from 'wired-elements';
 
 export type RouterParams = {
