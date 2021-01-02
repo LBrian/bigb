@@ -11,7 +11,7 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
 
   return (
     <div {...props}>
-      <div className='font-vt323 pb-4 text-3xl text-purple'>Hi, my name is</div>
+      <div className='font-vt323 pb-4 text-3xl text-pink'>Hi, my name is</div>
       <div className='text-5xl xl:text-7xl font-extrabold pb-2'>
         <DraculaName className='mr-4'>Brian</DraculaName>
         <DraculaName className='mr-4 hidden sm:inline'>Yueh-Peng</DraculaName>
