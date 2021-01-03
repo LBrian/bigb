@@ -1,3 +1,4 @@
+import 'wired-toggle';
 import React from 'preact';
 import { useContext } from 'preact/hooks';
 
