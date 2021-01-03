@@ -13,7 +13,7 @@ const Card = ({
   imageSrc,
   children,
   threshold = 0.6,
-  bgColor = 'bg-blue-gray',
+  bgColor = 'bg-blue-gray'
 }: PropsWithChildren<CardsProps>) => {
   const [ref, inView] = useInView({ threshold });
 
