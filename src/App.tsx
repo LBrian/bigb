@@ -1,5 +1,4 @@
 import React from 'react';
-import 'wired-elements';
 import { useEffect, useState } from 'preact/hooks';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
