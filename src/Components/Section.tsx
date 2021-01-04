@@ -22,7 +22,7 @@ const Section = ({
 
   return (
     <div
-      className={`pt-40 ml-auto w-full md:w-4/5 ${textAlign} ${
+      className={`pt-40 ml-auto w-full md:w-4/5 section-visibility ${textAlign} ${
         className ? className : ''
       }`}
       {...props}>

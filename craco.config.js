@@ -11,12 +11,23 @@ module.exports = {
       'react-dom/test-utils': 'preact/test-utils'
     }
   },
+  jest: {
+    configure: {
+      moduleNameMapper: {
+        '^react$': 'preact/compat',
+        '^react-dom/test-utils$': 'preact/test-utils',
+        '^react-dom$': 'preact/compat'
+      }
+    }
+  },
   babel: {
     plugins: [
       [
         '@babel/plugin-transform-react-jsx',
         {
+          pragma: 'h',
           runtime: 'automatic',
+          pragmaFrag: 'Fragment',
           importSource: 'preact',
           throwIfNamespace: false
         }

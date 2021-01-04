@@ -70,7 +70,7 @@
     "prettier": "^2.2.1"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{js,ts,tsx}": [
       "npm run lint"
     ],
     "*.{ts,tsx,json,js}": [
