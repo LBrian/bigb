@@ -1,7 +1,8 @@
 {
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#282a36",
+  "orientation": "portrait",
   "short_name": "Brian Liu",
   "name": "Brian Yueh-peng Liu",
   "background_color": "#f8f8f2",
