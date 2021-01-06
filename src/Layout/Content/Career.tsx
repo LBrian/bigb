@@ -20,8 +20,7 @@ const Career = () => {
             <li>
               <span>Initiated</span>
               <DraculaString className='mx-1'>TailwindCSS</DraculaString>
-              <span>v1</span>
-              <span>integration</span>
+              <span>v1 integration</span>
             </li>
           </ul>
         </Card>
@@ -31,7 +30,7 @@ const Career = () => {
           <ul className='list-disc list-inside text-left'>
             <li>
               <span>Initiated Apollo GraphQL Subscription</span>
-              <DraculaString className='mx-1'>WebSocke</DraculaString>
+              <DraculaString className='mx-1'>WebSocket</DraculaString>
               <span>projects</span>
             </li>
             <li>Boosted app performance 50%</li>

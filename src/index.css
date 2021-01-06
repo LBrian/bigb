@@ -89,7 +89,7 @@ body.dark [class*='shadow'],
   }
 
   .cards {
-    @apply grid gap-8 md:justify-end;
+    @apply grid gap-8 md:justify-end py-6 px-4;
   }
 
   @screen md {
@@ -99,7 +99,7 @@ body.dark [class*='shadow'],
   }
 
   .flip-card {
-    height: 500px;
+    height: 480px;
     perspective: 900px;
     @apply relative w-full md:w-96 inline-block text-white;
   }
@@ -108,12 +108,12 @@ body.dark [class*='shadow'],
     perspective: 900px;
     animation: entry 1s linear 1;
     transform: rotateX(45deg) scale(0.7);
-    @apply top-0 absolute w-full h-full duration-500 rounded-md opacity-80 flex flex-col overflow-hidden shadow-sm;
+    @apply top-0 absolute w-full h-full duration-500 rounded-md flex flex-col overflow-hidden shadow-sm;
   }
 
   .flip-card-content.flip-card-in-view {
     transform: rotate(0deg) scale(1);
-    @apply bg-blue-gray;
+    @apply bg-blue-gray shadow-sm;
   }
 
   .flip-card-image > img {
