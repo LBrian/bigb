@@ -1,24 +1,32 @@
-import React, { PropsWithChildren } from 'react';
+import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-interface CardsProps {
+interface CardsProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
   imageSrc?: string;
   threshold?: number;
-  bgColor?: 'bg-orange' | 'bg-purple' | 'bg-pink' | 'bg-red' | 'bg-blue-gray';
+  bgColor?:
+    | 'bg-orange'
+    | 'bg-purple'
+    | 'bg-pink'
+    | 'bg-red'
+    | 'bg-gray'
+    | 'bg-blue-gray';
 }
 
 const Card = ({
   title,
   imageSrc,
   children,
+  className,
   threshold = 0.6,
-  bgColor = 'bg-blue-gray'
+  bgColor = 'bg-gray',
+  ...props
 }: PropsWithChildren<CardsProps>) => {
-  const [ref, inView] = useInView({ threshold });
+  const [ref, inView] = useInView({ threshold, delay: 200 });
 
   return (
-    <div className='flip-card'>
+    <div className={`flip-card ${className ?? ''}`} {...props}>
       <div
         ref={ref}
         className={`flip-card-content ${bgColor} ${

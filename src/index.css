@@ -56,8 +56,9 @@ body.dark header.sticky {
 }
 
 body.dark [class*='shadow'],
-body.dark .flip-card-content {
-  --tw-shadow: 0 10px 15px -3px #44475a, 0 4px 6px -2px #44475a;
+.flip-card-content,
+.flip-card-image > img {
+  --tw-shadow: 0 10px 15px -3px #44475a, 0 4px 6px -2px #44475a !important;
 }
 
 :root {
@@ -89,7 +90,6 @@ body.dark .flip-card-content {
 
   .cards {
     @apply grid gap-8 md:justify-end;
-    grid-template-columns: 1fr;
   }
 
   @screen md {
@@ -107,25 +107,21 @@ body.dark .flip-card-content {
   .flip-card-content {
     perspective: 900px;
     animation: entry 1s linear 1;
-    box-shadow: 0px 10px 40px #777;
     transform: rotateX(45deg) scale(0.7);
-    @apply top-0 absolute w-full h-full duration-500 rounded-md opacity-75 flex flex-col overflow-hidden;
+    @apply top-0 absolute w-full h-full duration-500 rounded-md opacity-80 flex flex-col overflow-hidden shadow-sm;
   }
 
   .flip-card-content.flip-card-in-view {
     transform: rotate(0deg) scale(1);
-  }
-
-  .flip-card-image {
-    @apply h-40;
+    @apply bg-blue-gray;
   }
 
   .flip-card-image > img {
-    @apply h-full w-full object-cover;
+    @apply h-28 w-28 object-cover my-10 mx-auto rounded-3xl shadow-sm;
   }
 
   .flip-card-info {
-    @apply text-center flex-1 overflow-hidden flex flex-col mt-10 mx-6;
+    @apply text-center flex-1 overflow-hidden flex flex-col mx-6;
   }
 
   .flip-card-title {
@@ -135,6 +131,6 @@ body.dark .flip-card-content {
 
   .flip-card-description {
     letter-spacing: 1px;
-    @apply my-5 box-border overflow-y-auto;
+    @apply text-sm sm:text-base my-5 box-border overflow-y-auto;
   }
 }
