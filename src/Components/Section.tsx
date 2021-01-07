@@ -1,3 +1,4 @@
+import 'content-visibility';
 import React, { PropsWithChildren, HTMLAttributes } from 'react';
 
 import { DraculaName } from './Dracula';
@@ -21,22 +22,24 @@ const Section = ({
       : ['', ''];
 
   return (
-    <div
-      className={`pt-40 ml-auto w-full md:w-4/5 ${textAlign} ${
-        className ? className : ''
-      }`}
-      {...props}>
+    <content-visibility>
       <div
-        className={`mb-20 whitespace-nowrap flex items-center ${justifyItems}`}>
-        <span className='font-vt323 text-pink mr-4 text-xl md:text-3xl font-bold'>
-          &#60;&#47;&#62;
-        </span>
-        <DraculaName className='font-extrabold text-3xl sm:text-4xl md:text-5xl'>
-          {title}
-        </DraculaName>
+        className={`pt-40 ml-auto w-full md:w-4/5 ${textAlign} ${
+          className ? className : ''
+        }`}
+        {...props}>
+        <div
+          className={`mb-20 whitespace-nowrap flex items-center ${justifyItems}`}>
+          <span className='font-vt323 text-pink mr-4 text-xl md:text-3xl font-bold'>
+            &#60;&#47;&#62;
+          </span>
+          <DraculaName className='font-extrabold text-3xl sm:text-4xl md:text-5xl'>
+            {title}
+          </DraculaName>
+        </div>
+        {children}
       </div>
-      {children}
-    </div>
+    </content-visibility>
   );
 };
 
