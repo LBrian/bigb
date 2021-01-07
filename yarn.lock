@@ -3852,6 +3852,14 @@
   "resolved" "https://registry.npmjs.org/content-type/-/content-type-1.0.4.tgz"
   "version" "1.0.4"
 
+"content-visibility@^1.0.1":
+  "integrity" "sha512-+NssX8nl7zsDAFfNS7pgElmOvWxJnQ8pdnTKJmYEf9aUEtlVd/plvOi2IC1zuEPLCB/evLmA/nPxtxMK30XfCA=="
+  "resolved" "https://registry.npmjs.org/content-visibility/-/content-visibility-1.0.1.tgz"
+  "version" "1.0.1"
+  dependencies:
+    "intersection-observer" "^0.7.0"
+    "lit-element" "^2.3.1"
+
 "convert-source-map@^0.3.3":
   "integrity" "sha1-8dgClQr33SYxof6+BZZVDIarMZA="
   "resolved" "https://registry.npmjs.org/convert-source-map/-/convert-source-map-0.3.5.tgz"
@@ -6724,6 +6732,11 @@
     "es-abstract" "^1.17.0-next.1"
     "has" "^1.0.3"
     "side-channel" "^1.0.2"
+
+"intersection-observer@^0.7.0":
+  "integrity" "sha512-Id0Fij0HsB/vKWGeBe9PxeY45ttRiBmhFyyt/geBdDHBYNctMRTE3dC1U3ujzz3lap+hVXlEcVaB56kZP/eEUg=="
+  "resolved" "https://registry.npmjs.org/intersection-observer/-/intersection-observer-0.7.0.tgz"
+  "version" "0.7.0"
 
 "ip-regex@^2.1.0":
   "integrity" "sha1-+ni/XS5pE8kRzp+BnuUUa7bYROk="
