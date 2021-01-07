@@ -49,7 +49,7 @@ const Career = () => {
               <DraculaString className='mx-1'>Backbone.js</DraculaString>
             </li>
             <li>Kaggle Machine Learning tech sharing</li>
-            <li>I can sepak some Japanese</li>
+            <li>I can speak some Japanese</li>
           </ul>
         </Card>
         <Card title='Senior Full-stack Engineer' imageSrc='formac.png'>
