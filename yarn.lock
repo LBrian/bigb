@@ -3852,11 +3852,12 @@
   "resolved" "https://registry.npmjs.org/content-type/-/content-type-1.0.4.tgz"
   "version" "1.0.4"
 
-"content-visibility@^1.0.1":
-  "integrity" "sha512-+NssX8nl7zsDAFfNS7pgElmOvWxJnQ8pdnTKJmYEf9aUEtlVd/plvOi2IC1zuEPLCB/evLmA/nPxtxMK30XfCA=="
-  "resolved" "https://registry.npmjs.org/content-visibility/-/content-visibility-1.0.1.tgz"
-  "version" "1.0.1"
+"content-visibility@^1.0.8":
+  "integrity" "sha512-0ATFCw/VZrZI6Oksw1FOVCgGpU/g9k2NrH6X84H9NzfB/Wmcnj/bT+diMbzQZFz5l/+/JfIBlg250mEIyEkn4g=="
+  "resolved" "https://registry.npmjs.org/content-visibility/-/content-visibility-1.0.8.tgz"
+  "version" "1.0.8"
   dependencies:
+    "@types/react" "^17.0.0"
     "intersection-observer" "^0.7.0"
     "lit-element" "^2.3.1"
 
