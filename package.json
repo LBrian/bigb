@@ -25,7 +25,7 @@
     "wired-elements": "^2.1.2"
   },
   "scripts": {
-    "dev": "preact watch --template \"public/preact-template.html\"",
+    "dev": "preact watch --template \"public/preact-template.html\" --prerenderUrls \"prerender-urls.js\"",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
@@ -54,6 +54,7 @@
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
     "@tsconfig/recommended": "^1.0.1",
     "@types/react-router-dom": "^5.1.6",
+    "dotenv": "^8.2.0",
     "eslint-config-prettier": "^7.0.0",
     "eslint-config-react": "^1.1.7",
     "eslint-import-resolver-typescript": "^2.3.0",

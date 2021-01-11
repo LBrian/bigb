@@ -7,28 +7,29 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!-- Primary Meta Tags -->
-	<meta name="title" content="Brian YP Liu | Senior Front-end Engineer">
-	<meta name="description" content="Share my career journey of engineer and passion for front-end technologies">
+	<meta name="title" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogTitle %>">
+	<meta name="description" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogDescription %>">
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://brianypliu.com/">
-	<meta property="og:title" content="Brian YP Liu | Senior Front-end Engineer">
-	<meta property="og:description" content="Share my career journey of engineer and passion for front-end technologies">
-	<meta property="og:image" content="https://brianypliu.com/apple-splash-1136-640.jpg">
+	<meta property="og:url" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogUrl %>">
+	<meta property="og:title" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogTitle %>">
+	<meta property="og:description" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogDescription %>">
+	<meta property="og:image" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogImage %>">
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://brianypliu.com/">
-	<meta property="twitter:title" content="Brian YP Liu | Senior Front-end Engineer">
-	<meta property="twitter:description"
-		content="Share my career journey of engineer and passion for front-end technologies">
-	<meta property="twitter:image" content="https://brianypliu.com/apple-splash-1136-640.jpg">
-	<link rel="apple-touch-icon" href="/apple-icon-180.png">
-	<link rel="icon" type="image/png" sizes="196x196" href="/favicon-196.png">
-	<link rel="manifest" href="/manifest.webmanifest" />
+	<meta property="twitter:url" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogUrl %>">
+	<meta property="twitter:title" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogTitle %>">
+	<meta property="twitter:description" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogDescription %>">
+	<meta property="twitter:image" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogImage %>">
+
+	<link rel="apple-touch-icon" href="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.appleTouchIcon %>">
+	<link rel="icon" type="image/png" sizes="196x196" href="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.icon %>">
+	<link rel="manifest" href="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.manifest %>" />
 	<!-- woff2 actually download url, preconnect speed up woff2 download time -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<title>Brian YP Liu | Senior Front-end Engineer</title>
-	<% preact.headEnd %>
+	<link rel="preconnect" href="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.preconnect %>">
+	<title>
+		<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogTitle %>
+	</title>
 </head>
 
 <body>

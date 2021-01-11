@@ -6,8 +6,8 @@
   "short_name": "Brian Liu",
   "name": "Brian Yueh-peng Liu",
   "background_color": "#f8f8f2",
-  "categories": ["profile", "frontend", "javascript", "developer", "engineer"],
-  "description": "A frontend developer, Brian Liu, backyard for you to get to know me.",
+  "categories": ["profile", "profolio", "frontend developer", "frontend engineer", "web developer"],
+  "description": "My full-stack engineer journey across three continents (four countries) ended up to be a front-end passinated developer now.",
   "icons": [
     {
       "src": "manifest-icon-192.png",
