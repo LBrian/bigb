@@ -78,12 +78,19 @@ body.dark [class*='shadow'],
   }
 
   .cards {
-    @apply grid gap-8 md:justify-end py-6 px-4;
+    @apply grid gap-8 py-6 px-4;
+    justify-content: inherit;
+  }
+
+  .social-media {
+    --tw-grid-auto-fit-min: 2em;
+    @apply grid gap-6 pt-16 grid-cols-auto-fit justify-center md:justify-start;
   }
 
   @screen md {
     .cards {
-      grid-template-columns: repeat(auto-fit, 24em);
+      --tw-grid-auto-fit-min: 24em;
+      @apply grid-cols-auto-fit;
     }
   }
 

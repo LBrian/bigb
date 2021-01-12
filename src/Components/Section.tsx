@@ -16,15 +16,15 @@ const Section = ({
 }: PropsWithChildren<SectionProps> & HTMLAttributes<HTMLDivElement>) => {
   const [textAlign, justifyItems] =
     align === 'right'
-      ? ['md:text-right', 'md:justify-end']
+      ? ['ml-auto md:text-right md:w-4/5', 'md:justify-end']
       : align === 'left'
-      ? ['md:text-left', 'md:justify-start']
+      ? ['mr-auto md:text-left md:w-4/5', 'md:justify-start']
       : ['', ''];
 
   return (
     <content-visibility>
       <div
-        className={`pt-40 ml-auto w-full md:w-4/5 ${textAlign} ${
+        className={`pt-40 w-full ${textAlign} ${justifyItems} ${
           className ? className : ''
         }`}
         {...props}>

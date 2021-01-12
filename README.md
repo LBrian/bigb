@@ -5,4 +5,4 @@
 
 My profolio web site built by `Preact` with Google `Firebase`
 
-<img src="public/brianypliu.png" alt="brianypliu">
+<img src="public/image/brianypliu.png" alt="brianypliu">

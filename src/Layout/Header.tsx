@@ -15,7 +15,7 @@ const Header = () => {
           width={52}
           height={52}
           loading='lazy'
-          src='apple-icon-180.png'
+          src='/image/apple-icon-180.png'
         />
       </div>
       <wired-toggle checked={darkMode} onchange={toggleDarkMode} />

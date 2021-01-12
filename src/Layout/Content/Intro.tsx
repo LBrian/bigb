@@ -1,6 +1,17 @@
 import React, { HTMLAttributes } from 'react';
 
-import { DraculaName, DraculaString, DraculaNumber } from 'Components';
+import {
+  IconNpm,
+  IconMozilla,
+  IconGithub,
+  IconMedium,
+  IconReddit,
+  IconTwitter,
+  IconLinkedin,
+  DraculaName,
+  DraculaString,
+  DraculaNumber
+} from 'Components';
 
 const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
   const careerStart = new Date('2005-05-01T00:00:00Z');
@@ -37,10 +48,19 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
           width={280}
           height={280}
           loading='lazy'
-          src='/avatar.png'
+          src='/image/avatar.png'
           alt='Brian Liu avatar'
           className='m-auto md:m-0 duration-500 opacity-80'
         />
+      </div>
+      <div className='social-media'>
+        <IconNpm href='https://www.npmjs.com/~ralphbliu' />
+        <IconGithub href='https://github.com/LBrian' />
+        <IconMedium href='https://ralphbliu.medium.com/' />
+        <IconReddit href='https://www.reddit.com/user/bigbliu' />
+        <IconTwitter href='https://twitter.com/ralphbliu' />
+        <IconLinkedin href='https://www.linkedin.com/in/brianyliu/' />
+        <IconMozilla href='https://developer.mozilla.org/en-US/profiles/LBrian' />
       </div>
     </div>
   );
