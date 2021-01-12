@@ -75,6 +75,9 @@ body.dark [class*='shadow'],
     .font-vt323 {
       font-family: 'VT323', monospace;
     }
+    .filter-drop-shadow {
+      filter: drop-shadow(2px 2px 2px #6272a4);
+    }
   }
 
   .cards {

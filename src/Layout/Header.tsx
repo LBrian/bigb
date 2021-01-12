@@ -15,6 +15,7 @@ const Header = () => {
           width={52}
           height={52}
           loading='lazy'
+          className='filter-drop-shadow'
           src='/image/apple-icon-180.png'
         />
       </div>

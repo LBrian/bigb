@@ -50,7 +50,7 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
           loading='lazy'
           src='/image/avatar.png'
           alt='Brian Liu avatar'
-          className='m-auto md:m-0 duration-500 opacity-80'
+          className='m-auto md:m-0 duration-500'
         />
       </div>
       <div className='social-media'>

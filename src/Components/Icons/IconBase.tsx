@@ -9,7 +9,10 @@ const IconBase = ({
   ...props
 }: SVGProps<SVGSVGElement>) => {
   return (
-    <a href={href} target={target ?? '_blank'} className='fill-current'>
+    <a
+      href={href}
+      target={target ?? '_blank'}
+      className='fill-current filter-drop-shadow'>
       <svg
         version='1.1'
         viewBox='0 0 512 512'
