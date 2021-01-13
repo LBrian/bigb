@@ -39,7 +39,7 @@ const Card = ({
           <img src={imageSrc} alt={title} loading='lazy' />
         </div>
         <div
-          className={`flip-card-info${
+          className={`flip-card-info ${
             !darkMode && !bgColor ? ' text-blue-gray' : ''
           }`}>
           <div className='flip-card-title filter-drop-shadow'>{title}</div>
