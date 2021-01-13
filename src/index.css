@@ -94,6 +94,22 @@ body.dark [class*='shadow'],
     @apply grid gap-6 pt-16 grid-cols-auto-fit justify-center md:justify-start;
   }
 
+  .avatar {
+    @apply relative inline-block;
+  }
+
+  .avatar:hover .avatar-badge {
+    width: 120px;
+    @apply z-0 opacity-80;
+  }
+
+  .avatar-badge {
+    @apply absolute rounded-md opacity-50 transition-all duration-500;
+    z-index: -1;
+    top: var(--tw-avatar-badge-top, 0);
+    left: var(--tw-avatar-badge-left, 0);
+  }
+
   @screen md {
     .cards {
       --tw-grid-auto-fit-min: 24em;

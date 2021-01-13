@@ -43,15 +43,30 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
           love building web applications.
         </DraculaString>
       </div>
-      <div className='flex mt-20'>
-        <img
-          width={280}
-          height={280}
-          loading='lazy'
-          src='/image/avatar.png'
-          alt='Brian Liu avatar'
-          className='m-auto md:m-0 duration-500'
-        />
+      <div className='mt-20 text-center md:text-left'>
+        <div className='avatar'>
+          <img
+            width={280}
+            height={280}
+            loading='lazy'
+            src='/image/avatar.png'
+            alt='Brian Liu avatar'
+            className='duration-500'
+          />
+          <a
+            target='_blank'
+            rel='noreferrer'
+            href='https://www.youracclaim.com/users/brian-yueh-peng-liu'>
+            <img
+              width={70}
+              height={70}
+              loading='lazy'
+              alt='jslandia'
+              className='avatar-badge'
+              src='/image/openjs-foundation-javascriptlandia.png'
+            />
+          </a>
+        </div>
       </div>
       <div className='social-media'>
         <IconNpm href='https://www.npmjs.com/~ralphbliu' />
