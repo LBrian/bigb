@@ -86,7 +86,7 @@ body.dark [class*='shadow'],
   }
 
   .social-media {
-    --tw-grid-auto-fit-min: 2em;
+    --tw-grid-auto-fit-min: 2.5em;
     @apply grid gap-6 pt-16 grid-cols-auto-fit justify-center md:justify-start;
   }
 

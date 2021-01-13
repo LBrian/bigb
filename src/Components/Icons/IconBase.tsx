@@ -16,8 +16,8 @@ const IconBase = ({
       <svg
         version='1.1'
         viewBox='0 0 512 512'
-        width={width ?? '2em'}
-        height={height ?? '2em'}
+        width={width ?? '2.5em'}
+        height={height ?? '2.5em'}
         style={{
           fill: 'inherits',
           fillRule: 'evenodd',
