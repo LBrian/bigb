@@ -76,7 +76,7 @@ body.dark [class*='shadow'],
       font-family: 'VT323', monospace;
     }
     .filter-drop-shadow {
-      filter: drop-shadow(2px 2px 2px #6272a4);
+      filter: drop-shadow(-2px 2px 2px #6272a4);
     }
   }
 
@@ -112,7 +112,7 @@ body.dark [class*='shadow'],
 
   .flip-card-content.flip-card-in-view {
     transform: rotate(0deg) scale(1);
-    @apply bg-blue-gray shadow-sm;
+    @apply shadow-sm;
   }
 
   .flip-card-image > img {
@@ -124,7 +124,6 @@ body.dark [class*='shadow'],
   }
 
   .flip-card-title {
-    text-shadow: 0px 4px 3px #44475a;
     @apply font-mono text-xl;
   }
 
