@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'preact/hooks';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Content, Header } from 'Layout';
+import { Content, Header, Footer } from 'Layout';
 
 const LOCAL_STORAGE_KEYS = {
   darkMode: 'bigb/darkMode'
@@ -47,6 +47,7 @@ const App = () => {
             </Route>
           </Switch>
         </Router>
+        <Footer />
       </div>
     </AppContext.Provider>
   );

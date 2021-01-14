@@ -34,14 +34,18 @@
     U+FEFF, U+FFFD;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  color: #282a36;
-  background: #f8f8f2;
+  @apply text-black;
+  @apply bg-white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -50,29 +54,30 @@ body {
 }
 
 body header.sticky {
-  background: #f8f8f2;
+  @apply bg-white;
 }
 
 body.dark,
 body.dark header.sticky {
-  color: #f8f8f2;
-  background: #282a36;
+  @apply text-neon-blue;
+  @apply bg-dark-teal;
 }
 
 body.dark [class*='shadow'],
-.flip-card-content,
-.flip-card-image > img {
-  --tw-shadow: 0 10px 15px -3px #44475a, 0 4px 6px -2px #44475a !important;
+body.dark .flip-card-content,
+body.dark .flip-card-image > img {
+  --tw-shadow: 0 10px 15px -3px rgba(17, 236, 229, 0.2),
+    0 4px 6px -2px rgba(17, 236, 229, 0.2) !important;
+}
+
+body.dark .filter-drop-shadow {
+  --tw-filter-drop-shadow: rgb(17, 236, 229);
 }
 
 :root {
   --wired-toggle-off-color: #44475a;
-  --wired-toggle-on-color: #8be9fd;
+  --wired-toggle-on-color: rgb(17, 236, 229);
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer utilities {
   @variants responsive {
@@ -80,7 +85,7 @@ body.dark [class*='shadow'],
       font-family: 'VT323', monospace;
     }
     .filter-drop-shadow {
-      filter: drop-shadow(-2px 2px 2px #6272a4);
+      filter: drop-shadow(-2px 2px 2px var(--tw-filter-drop-shadow, #6272a4));
     }
   }
 
@@ -136,6 +141,7 @@ body.dark [class*='shadow'],
     perspective: 900px;
     animation: entry 1s linear 1;
     transform: rotateX(45deg) scale(0.7);
+    --tw-shadow: 0 10px 15px -3px #6272a4, 0 4px 6px -2px #6272a4 !important;
     @apply top-0 absolute w-full h-full duration-500 rounded-md flex flex-col overflow-hidden shadow-sm;
   }
 
@@ -145,6 +151,7 @@ body.dark [class*='shadow'],
   }
 
   .flip-card-image > img {
+    --tw-shadow: 0 10px 15px -3px #6272a4, 0 4px 6px -2px #6272a4 !important;
     @apply h-28 w-28 object-cover my-10 mx-auto rounded-3xl shadow-sm;
   }
 
