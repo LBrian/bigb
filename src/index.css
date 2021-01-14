@@ -99,12 +99,21 @@ body.dark [class*='shadow'],
   }
 
   .avatar:hover .avatar-badge {
-    width: 120px;
+    width: 100px;
     @apply z-0 opacity-80;
   }
 
+  .avatar > a:nth-child(2) {
+    --tw-avatar-badge-top: 20px;
+  }
+
+  .avatar > a:nth-child(3) {
+    --tw-avatar-badge-left: 55px;
+    --tw-avatar-badge-top: -25px;
+  }
+
   .avatar-badge {
-    @apply absolute rounded-md opacity-50 transition-all duration-500;
+    @apply absolute rounded-md opacity-50 transition-all duration-500 filter-drop-shadow;
     z-index: -1;
     top: var(--tw-avatar-badge-top, 0);
     left: var(--tw-avatar-badge-left, 0);

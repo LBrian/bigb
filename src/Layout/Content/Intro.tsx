@@ -58,12 +58,25 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
             rel='noreferrer'
             href='https://www.youracclaim.com/users/brian-yueh-peng-liu'>
             <img
-              width={70}
-              height={70}
+              width={60}
+              height={60}
               loading='lazy'
               alt='jslandia'
               className='avatar-badge'
               src='/image/openjs-foundation-javascriptlandia.png'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noreferrer'
+            href='https://www.webcomponents.org/author/LBrian'>
+            <img
+              width={60}
+              height={60}
+              loading='lazy'
+              alt='webcomponent'
+              className='avatar-badge'
+              src='/image/webcomponent-192x192.png'
             />
           </a>
         </div>
