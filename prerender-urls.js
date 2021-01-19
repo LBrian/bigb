@@ -2,7 +2,7 @@ module.exports = function () {
   return [
     {
       url: '/',
-      icon: '/favicon-196.png',
+      icon: '/assets/favicon-196.png',
       manifest: '/manifest.json',
       preconnect: 'https://fonts.gstatic.com',
       appleTouchIcon: '/assets/icons/apple-icon-180.png',
