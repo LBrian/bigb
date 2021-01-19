@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import type { FC, JSX } from 'preact/compat';
 
 import {
   IconNpm,
@@ -11,9 +11,9 @@ import {
   DraculaName,
   DraculaString,
   DraculaNumber
-} from 'Components';
+} from 'components';
 
-const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
+const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
   const careerStart = new Date('2005-05-01T00:00:00Z');
   const careerTimePeriod = new Date(
     new Date().getTime() - careerStart.getTime()
@@ -49,7 +49,7 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
             width={280}
             height={280}
             loading='lazy'
-            src='/image/avatar.png'
+            src='/assets/images/avatar.png'
             alt='Brian Liu avatar'
             className='duration-500'
           />
@@ -63,7 +63,7 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
               loading='lazy'
               alt='jslandia'
               className='avatar-badge'
-              src='/image/openjs-foundation-javascriptlandia.png'
+              src='/assets/images/openjs-foundation-javascriptlandia.png'
             />
           </a>
           <a
@@ -76,7 +76,7 @@ const Intro = (props: HTMLAttributes<HTMLDivElement>) => {
               loading='lazy'
               alt='webcomponent'
               className='avatar-badge'
-              src='/image/webcomponent-192x192.png'
+              src='/assets/images/webcomponent-192x192.png'
             />
           </a>
         </div>

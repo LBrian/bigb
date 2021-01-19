@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
+    "jsxImportSource": "preact",
     "baseUrl": "src",
-    "target": "ESNext",
+    "target": "es5",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    "module": "CommonJS",
     "allowJs": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowSyntheticDefaultImports": true,
@@ -15,7 +16,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "types": ["preact/jsx-runtime"]
   },
   "include": ["src/**/*"]
 }

@@ -1,13 +1,13 @@
-import React, { SVGProps } from 'react';
+import type { FC, JSX } from 'preact/compat';
 
-const IconBase = ({
+const IconBase: FC<JSX.SVGAttributes<SVGSVGElement>> = ({
   href,
   target,
   width,
   height,
   children,
   ...props
-}: SVGProps<SVGSVGElement>) => {
+}) => {
   return (
     <a
       href={href}

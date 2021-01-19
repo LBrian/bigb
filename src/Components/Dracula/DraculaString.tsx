@@ -1,13 +1,13 @@
-import React, { PropsWithChildren, HTMLAttributes } from 'react';
+import type { FC, JSX } from 'preact/compat';
 import { useContext } from 'preact/hooks';
 
-import { AppContext } from 'App';
+import { AppContext } from 'AppContextProvider';
 
-const DraculaString = ({
+const DraculaString: FC<JSX.HTMLAttributes<HTMLSpanElement>> = ({
   children,
   className,
   ...props
-}: PropsWithChildren<HTMLAttributes<HTMLSpanElement>>) => {
+}) => {
   const { darkMode } = useContext(AppContext);
 
   return (

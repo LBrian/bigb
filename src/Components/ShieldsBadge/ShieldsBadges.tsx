@@ -1,16 +1,18 @@
+import type { FC, JSX } from 'preact/compat';
 import { useInView } from 'react-intersection-observer';
-import React, { HTMLAttributes, PropsWithChildren } from 'react';
 
 import ShieldsBadge, { ShieldsBadgeProps } from './ShieldsBadge';
 
-const ShieldsBadges = ({
+type ShieldsBadgesProps = JSX.HTMLAttributes<HTMLDivElement> & {
+  badges?: ShieldsBadgeProps[];
+};
+
+const ShieldsBadges: FC<ShieldsBadgesProps> = ({
   badges,
   children,
   className,
   ...props
-}: PropsWithChildren<
-  HTMLAttributes<HTMLDivElement> & { badges?: ShieldsBadgeProps[] }
->) => {
+}) => {
   const [ref, inView] = useInView({ triggerOnce: true });
   return (
     <div

@@ -2,15 +2,15 @@ module.exports = function () {
   return [
     {
       url: '/',
-      icon: process.env.REACT_APP_ICON,
-      manifest: process.env.REACT_APP_MANIFEST,
-      preconnect: process.env.REACT_APP_PRECONNECT,
-      appleTouchIcon: process.env.REACT_APP_APPLE_TOUCH_ICON,
+      icon: '/favicon-196.png',
+      manifest: '/manifest.json',
+      preconnect: 'https://fonts.gstatic.com',
+      appleTouchIcon: '/assets/icons/apple-icon-180.png',
       // Open Graph meta
-      ogTitle: process.env.REACT_APP_OG_TITLE,
-      ogUrl: process.env.REACT_APP_OG_URL,
-      ogImage: process.env.REACT_APP_OG_IMAGE,
-      ogDescription: process.env.REACT_APP_OG_DESCRIPTION
+      ogTitle: 'Brian YP Liu | Senior Front-end Engineer',
+      ogUrl: 'https://brianypliu.com/',
+      ogImage: 'https://brianypliu.com/assets/icons/apple-splash-1136-640.jpg',
+      ogDescription: 'My full-stack engineer journey across three continents (four countries) ended up to be a front-end passinated developer now.'
     }
   ];
 };

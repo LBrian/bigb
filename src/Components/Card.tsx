@@ -1,9 +1,9 @@
-import React, { useContext, HTMLAttributes, PropsWithChildren } from 'react';
+import { FC, JSX, useContext } from 'preact/compat';
 import { useInView } from 'react-intersection-observer';
 
-import { AppContext } from 'App';
+import { AppContext } from 'AppContextProvider';
 
-interface CardsProps extends HTMLAttributes<HTMLDivElement> {
+interface CardsProps extends JSX.HTMLAttributes<HTMLDivElement> {
   title: string;
   imageSrc?: string;
   threshold?: number;
@@ -16,7 +16,7 @@ interface CardsProps extends HTMLAttributes<HTMLDivElement> {
     | 'bg-blue-gray';
 }
 
-const Card = ({
+const Card: FC<CardsProps> = ({
   title,
   imageSrc,
   children,
@@ -24,7 +24,7 @@ const Card = ({
   threshold = 0.6,
   bgColor,
   ...props
-}: PropsWithChildren<CardsProps>) => {
+}) => {
   const { darkMode } = useContext(AppContext);
   const [ref, inView] = useInView({ threshold, delay: 200 });
 

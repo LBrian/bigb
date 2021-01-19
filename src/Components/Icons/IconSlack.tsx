@@ -1,8 +1,8 @@
-import React, { SVGProps } from 'react';
+import type { FC, JSX } from 'preact/compat';
 
 import IconBase from './IconBase';
 
-const IconSlack = (props: SVGProps<SVGSVGElement>) => {
+const IconSlack: FC<JSX.SVGAttributes<SVGSVGElement>> = (props) => {
   return (
     <IconBase {...props}>
       <g>

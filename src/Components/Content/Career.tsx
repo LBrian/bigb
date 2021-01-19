@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { Card, Section, DraculaString } from 'Components';
+import { Card, Section, DraculaString } from 'components';
 
 const Career = () => {
   return (
@@ -8,7 +6,7 @@ const Career = () => {
       <div className='cards'>
         <Card
           title='Front-end Engineer Team Lead'
-          imageSrc='/image/stackla.png'>
+          imageSrc='/assets/images/stackla.png'>
           <ul className='list-disc list-inside text-left'>
             <li>1st &#x1F1E6;&#x1F1FA; oversea job offer</li>
             <li>&#9883; ReactConf AU 2020</li>
@@ -28,7 +26,7 @@ const Career = () => {
         </Card>
         <Card
           title='Senior React Front-end Engineer'
-          imageSrc='/image/tradeledger.png'>
+          imageSrc='/assets/images/tradeledger.png'>
           <ul className='list-disc list-inside text-left'>
             <li>
               <span>Initiated Apollo GraphQL Subscription</span>
@@ -41,7 +39,7 @@ const Career = () => {
             <li>Established code quality first culture</li>
           </ul>
         </Card>
-        <Card title='Front-end Engineer' imageSrc='/image/line.png'>
+        <Card title='Front-end Engineer' imageSrc='/assets/images/line.png'>
           <ul className='list-disc list-inside text-left'>
             <li>1st &#x1F1EF;&#x1F1F5; oversea job offer</li>
             <li>
@@ -54,7 +52,9 @@ const Career = () => {
             <li>I can speak some Japanese</li>
           </ul>
         </Card>
-        <Card title='Senior Full-stack Engineer' imageSrc='/image/formac.png'>
+        <Card
+          title='Senior Full-stack Engineer'
+          imageSrc='/assets/images/formac.png'>
           <ul className='list-disc list-inside text-left'>
             <li>1st &#x1F1EC;&#x1F1E7; oversea job offer</li>
             <li>Career turning point to front-end</li>
@@ -65,7 +65,9 @@ const Career = () => {
             </li>
           </ul>
         </Card>
-        <Card title='Senior Software Engineer' imageSrc='/image/yahoo.png'>
+        <Card
+          title='Senior Software Engineer'
+          imageSrc='/assets/images/yahoo.png'>
           <ul className='list-disc list-inside text-left'>
             <li>
               <span>Hello to</span>
@@ -79,7 +81,7 @@ const Career = () => {
         </Card>
         <Card
           title='Senior Software Engineer in Test'
-          imageSrc='/image/trendmicro.jpg'>
+          imageSrc='/assets/images/trendmicro.jpg'>
           <ul className='list-disc list-inside text-left'>
             <li>Cisco IoT projects</li>
             <li>In-house test framework TMSTAF</li>

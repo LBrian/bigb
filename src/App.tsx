@@ -1,56 +1,20 @@
-import React from 'react';
-import { useEffect, useState } from 'preact/hooks';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import { Router } from 'preact-router';
 
-import { Content, Header, Footer } from 'Layout';
+import { Header, Footer, Intro, Career } from 'components';
 
-const LOCAL_STORAGE_KEYS = {
-  darkMode: 'bigb/darkMode'
-};
+import AppContextProvider from './AppContextProvider';
 
-const AppContext = React.createContext({
-  darkMode: false,
-  toggleDarkMode: () => {}
-});
-
-const App = () => {
-  const prevDarkMode =
-    localStorage.getItem(LOCAL_STORAGE_KEYS.darkMode) ?? true;
-  const [darkMode, setDarkMode] = useState<boolean>(Boolean(prevDarkMode));
-
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  }, [darkMode]);
-
-  return (
-    <AppContext.Provider
-      value={{
-        darkMode,
-        toggleDarkMode: () => {
-          setDarkMode(!darkMode);
-          localStorage.setItem(
-            LOCAL_STORAGE_KEYS.darkMode,
-            !darkMode ? '1' : ''
-          );
-        }
-      }}>
-      <div className='flex-1'>
-        <Header />
-        <Router>
-          <Switch>
-            <Route path='/:topic?'>
-              <Content />
-            </Route>
-          </Switch>
-        </Router>
-        <Footer />
+const App = () => (
+  <AppContextProvider>
+    <div id='app'>
+      <Header />
+      <div className='py-20 px-4 sm:px-14 md:px-32 lg:px-48 xl:px-64 font-sans'>
+        <Intro />
+        <Career />
       </div>
-    </AppContext.Provider>
-  );
-};
+    </div>
+    <Footer />
+  </AppContextProvider>
+);
 
-export { App as default, AppContext };
+export default App;

@@ -1,10 +1,8 @@
-import React, { HTMLAttributes } from 'react';
+import type { FC, JSX } from 'preact/compat';
 
-const DraculaNumber = ({
-  value,
-  className,
-  ...props
-}: HTMLAttributes<HTMLSpanElement> & { value: number }) => (
+const DraculaNumber: FC<
+  JSX.HTMLAttributes<HTMLSpanElement> & { value: number }
+> = ({ value, className, ...props }) => (
   <span
     className={`text-purple font-semibold ${className ? className : ''}`}
     {...props}>

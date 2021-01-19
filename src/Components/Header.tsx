@@ -1,8 +1,7 @@
 import 'wired-toggle';
-import React from 'preact';
 import { useContext } from 'preact/hooks';
 
-import { AppContext } from 'App';
+import { AppContext } from 'AppContextProvider';
 
 const Header = () => {
   const { darkMode, toggleDarkMode } = useContext(AppContext);
@@ -16,7 +15,7 @@ const Header = () => {
           height={52}
           loading='lazy'
           className='filter-drop-shadow'
-          src='/image/apple-icon-180.png'
+          src='/assets/icons/apple-icon-180.png'
         />
       </div>
       <wired-toggle checked={darkMode} onchange={toggleDarkMode} />

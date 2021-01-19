@@ -1,19 +1,19 @@
 import 'content-visibility';
-import React, { PropsWithChildren, HTMLAttributes } from 'react';
+import type { FC, JSX } from 'preact/compat';
 
 import { DraculaName } from './Dracula';
 
-interface SectionProps {
+type SectionProps = JSX.HTMLAttributes<HTMLDivElement> & {
   align?: 'left' | 'right';
-}
+};
 
-const Section = ({
+const Section: FC<SectionProps> = ({
   align,
   title,
   children,
   className,
   ...props
-}: PropsWithChildren<SectionProps> & HTMLAttributes<HTMLDivElement>) => {
+}) => {
   const [textAlign, justifyItems] =
     align === 'right'
       ? ['ml-auto md:text-right md:w-4/5', 'md:justify-end']

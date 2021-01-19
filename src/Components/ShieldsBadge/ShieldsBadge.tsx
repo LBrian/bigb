@@ -1,6 +1,6 @@
-import React, { HTMLAttributes } from 'react';
+import type { FC, JSX } from 'preact/compat';
 
-export interface ShieldsBadgeProps {
+export type ShieldsBadgeProps = JSX.HTMLAttributes<HTMLImageElement> & {
   label: string;
   value: string;
   color:
@@ -19,14 +19,14 @@ export interface ShieldsBadgeProps {
     | 'brightgreen'
     | 'yellowgreen'
     | 'informational';
-}
+};
 
-const ShieldsBadge = ({
+const ShieldsBadge: FC<ShieldsBadgeProps> = ({
   label,
   value,
   color,
   ...props
-}: ShieldsBadgeProps & HTMLAttributes<HTMLImageElement>) => {
+}) => {
   return (
     <img
       loading='lazy'

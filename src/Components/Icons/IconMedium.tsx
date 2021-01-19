@@ -1,8 +1,8 @@
-import React, { SVGProps } from 'react';
+import type { FC, JSX } from 'preact/compat';
 
 import IconBase from './IconBase';
 
-const IconMedium = (props: SVGProps<SVGSVGElement>) => {
+const IconMedium: FC<JSX.SVGAttributes<SVGSVGElement>> = (props) => {
   return (
     <IconBase {...props} viewBox='0 0 1151 1151'>
       <g transform='matrix(1,0,0,1,-246.226,-1.33631)'>
