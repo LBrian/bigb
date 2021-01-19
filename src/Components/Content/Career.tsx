@@ -1,4 +1,6 @@
-import { Card, Section, DraculaString } from 'components';
+import Card from '../Card';
+import Section from '../Section';
+import { DraculaString } from '../Dracula';
 
 const Career = () => {
   return (

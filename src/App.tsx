@@ -1,5 +1,5 @@
 import './index.css';
-import { Header, Footer, Intro, Career } from 'components';
+import { Header, Footer, Intro, Career } from './components';
 
 import AppContextProvider from './AppContextProvider';
 
