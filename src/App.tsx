@@ -1,4 +1,3 @@
-// import { Router } from 'preact-router';
 import './index.css';
 import { Header, Footer, Intro, Career } from 'components';
 

@@ -10,7 +10,7 @@ module.exports = (config, env, helpers) => {
   });
 
   // Modules import resolving paths
-  config.resolve.modules.push('src/');
+  config.resolve.modules.push('src');
 
   return config;
 };
