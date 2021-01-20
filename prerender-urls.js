@@ -3,7 +3,7 @@ module.exports = function () {
     {
       url: '/',
       icon: '/assets/favicon-196.png',
-      manifest: '/manifest.json',
+      manifest: '/manifest.webmanifest',
       preconnect: 'https://fonts.gstatic.com',
       appleTouchIcon: '/assets/icons/apple-icon-180.png',
       // Open Graph meta
