@@ -1,8 +1,3 @@
-export * from './Icons';
-export * from './Content';
-export * from './Dracula';
-export { default as Card } from './Card';
-export { default as Header } from './Header';
-export { default as Footer } from './Footer';
-export { default as Section } from './Section';
-export { default as ShieldsBadge, ShieldsBadges } from './ShieldsBadge';
+export * from './Primitive';
+export { default as Intro } from './Intro';
+export { default as Career } from './Career';

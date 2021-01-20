@@ -1,4 +1,3 @@
-import type { JSX } from 'preact';
 import { WiredToggle } from 'wired-elements';
 
 declare module 'preact' {

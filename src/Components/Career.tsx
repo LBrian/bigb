@@ -1,6 +1,4 @@
-import Card from '../Card';
-import Section from '../Section';
-import { DraculaString } from '../Dracula';
+import { Card, Section, DraculaString } from './Primitive';
 
 const Career = () => {
   return (

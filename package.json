@@ -13,7 +13,8 @@
   "eslintConfig": {
     "extends": "preact",
     "ignorePatterns": [
-      "build/"
+      "build/",
+      "/**/*.d.ts"
     ],
     "rules": {
       "no-console": "warn",

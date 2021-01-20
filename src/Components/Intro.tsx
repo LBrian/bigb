@@ -1,6 +1,5 @@
 import type { FC, JSX } from 'preact/compat';
 
-import { DraculaName, DraculaString, DraculaNumber } from '../Dracula';
 import {
   IconNpm,
   IconMozilla,
@@ -8,8 +7,11 @@ import {
   IconMedium,
   IconReddit,
   IconTwitter,
-  IconLinkedin
-} from '../Icons';
+  IconLinkedin,
+  DraculaName,
+  DraculaString,
+  DraculaNumber
+} from './Primitive';
 
 const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
   const careerStart = new Date('2005-05-01T00:00:00Z');
