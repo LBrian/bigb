@@ -60,7 +60,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --staged && npm run test"
+      "pre-commit": "lint-staged && pretty-quick --staged",
+      "pre-push": "npm run test"
     }
   },
   "lint-staged": {
