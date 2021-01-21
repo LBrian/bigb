@@ -1,27 +1,27 @@
-// import { h } from "preact"
+import { h } from "preact"
 // See: https://github.com/preactjs/enzyme-adapter-preact-pure
-// import { mount } from 'enzyme';
+import { mount } from 'enzyme';
 
-// import { Header } from '../src/Layout';
-// import { AppContext } from '../src/AppContextProvider';
+import { Header } from '../src/Layout';
+import { AppContext } from '../src/AppContextProvider';
 
 describe('Header component', () => {
 	test('Header toggle darkMode', () => {
 		expect(true).toBe(true)
-		// const state = {darkMode: true, toggleDarkMode: () => {state.darkMode = !state.darkMode;}};
-		// const context = mount(<AppContext.Provider value={state}><Header /></AppContext.Provider>);
-		// const toggle = context.find('wired-toggle');
+		const state = {darkMode: true, toggleDarkMode: () => {state.darkMode = !state.darkMode;}};
+		const context = mount(<AppContext.Provider value={state}><Header /></AppContext.Provider>);
+		const toggle = context.find('wired-toggle');
 
-		// expect(toggle.props().checked).toBe(true);
+		expect(toggle.props().checked).toBe(true);
 
-		// toggle.simulate('change');
-		// toggle.update();
+		toggle.simulate('change');
+		toggle.update();
 
-		// expect(state.darkMode).toBe(false);
+		expect(state.darkMode).toBe(false);
 
-		// toggle.simulate('change');
-		// toggle.update();
+		toggle.simulate('change');
+		toggle.update();
 
-		// expect(state.darkMode).toBe(true);
+		expect(state.darkMode).toBe(true);
 	});
 });

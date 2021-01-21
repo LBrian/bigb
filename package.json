@@ -51,6 +51,9 @@
     "modulePaths": [
       "<rootDir>/src/"
     ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(wired-toggle|lit-element|wired-lib|wired-base|lit-html)/)"
+    ],
     "setupFiles": [
       "<rootDir>/tests/__mocks__/browserMocks.js",
       "<rootDir>/tests/__mocks__/setupTests.js"
