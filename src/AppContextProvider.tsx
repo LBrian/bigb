@@ -1,5 +1,5 @@
-import type { ComponentChildren } from 'preact';
-import { useState, useEffect, createContext } from 'preact/compat';
+import { h } from 'preact';
+import { useState, useEffect, createContext, FC } from 'preact/compat';
 
 const LOCAL_STORAGE_KEYS = {
   darkMode: 'bigb/darkMode'
@@ -10,11 +10,7 @@ const AppContext = createContext({
   toggleDarkMode: () => {}
 });
 
-type AppContextProviderProps = {
-  children: ComponentChildren;
-};
-
-const AppContextProvider = ({ children }: AppContextProviderProps) => {
+const AppContextProvider: FC = ({ children }) => {
   const prevDarkMode =
     localStorage.getItem(LOCAL_STORAGE_KEYS.darkMode) ?? true;
   const [darkMode, setDarkMode] = useState(Boolean(prevDarkMode));
