@@ -19,6 +19,38 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
     new Date().getTime() - careerStart.getTime()
   );
   const years = careerTimePeriod.getFullYear() - 1971;
+  const badges = [
+    {
+      href: 'https://www.youracclaim.com/users/brian-yueh-peng-liu',
+      alt: 'jslandia',
+      image: 'openjs-foundation-javascriptlandia.png'
+    },
+    {
+      href: 'https://github.com/LBrian/brian-karina',
+      alt: 'blitzjs',
+      image: 'blitzjs.png'
+    },
+    {
+      href: 'https://www.webcomponents.org/author/LBrian',
+      alt: 'webcomponent',
+      image: 'webcomponent-192x192.png'
+    },
+    {
+      href: '',
+      alt: 'preact',
+      image: 'preact.png'
+    },
+    {
+      href: 'https://stackla.com/',
+      alt: 'react',
+      image: 'react.png'
+    },
+    {
+      href: '',
+      alt: 'vanillajs',
+      image: 'vanillajs.png'
+    }
+  ];
 
   return (
     <div {...props}>
@@ -53,45 +85,18 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
             alt='Brian Liu avatar'
             className='duration-500'
           />
-          <a
-            target='_blank'
-            rel='noreferrer'
-            href='https://www.youracclaim.com/users/brian-yueh-peng-liu'>
-            <img
-              width={60}
-              height={60}
-              loading='lazy'
-              alt='jslandia'
-              className='avatar-badge'
-              src='/assets/images/openjs-foundation-javascriptlandia.png'
-            />
-          </a>
-          <a
-            target='_blank'
-            rel='noreferrer'
-            href='https://github.com/LBrian/brian-karina'>
-            <img
-              width={60}
-              height={60}
-              loading='lazy'
-              alt='blitzjs'
-              className='avatar-badge'
-              src='/assets/images/blitzjs.png'
-            />
-          </a>
-          <a
-            target='_blank'
-            rel='noreferrer'
-            href='https://www.webcomponents.org/author/LBrian'>
-            <img
-              width={60}
-              height={60}
-              loading='lazy'
-              alt='webcomponent'
-              className='avatar-badge'
-              src='/assets/images/webcomponent-192x192.png'
-            />
-          </a>
+          {badges.map(({ alt, image, href }) => (
+            <a target='_blank' rel='noreferrer' href={href}>
+              <img
+                width={60}
+                height={60}
+                loading='lazy'
+                alt={alt}
+                className='avatar-badge'
+                src={`/assets/images/${image}`}
+              />
+            </a>
+          ))}
         </div>
       </div>
       <div className='social-media'>
