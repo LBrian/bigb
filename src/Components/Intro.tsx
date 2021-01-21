@@ -69,6 +69,19 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
           <a
             target='_blank'
             rel='noreferrer'
+            href='https://github.com/LBrian/brian-karina'>
+            <img
+              width={60}
+              height={60}
+              loading='lazy'
+              alt='blitzjs'
+              className='avatar-badge'
+              src='/assets/images/blitzjs.png'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noreferrer'
             href='https://www.webcomponents.org/author/LBrian'>
             <img
               width={60}
