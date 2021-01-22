@@ -7,7 +7,6 @@ import { AppContext } from '../src/AppContextProvider';
 
 describe('Header component', () => {
 	test('Header toggle darkMode', () => {
-		expect(true).toBe(true)
 		const state = {darkMode: true, toggleDarkMode: () => {state.darkMode = !state.darkMode;}};
 		const context = mount(<AppContext.Provider value={state}><Header /></AppContext.Provider>);
 		const toggle = context.find('wired-toggle');
