@@ -1,4 +1,4 @@
-import 'particles.js';
+import { tsParticles } from 'tsparticles';
 import { useEffect } from 'preact/compat';
 
 import './index.css';
@@ -9,8 +9,7 @@ import AppContextProvider from './AppContextProvider';
 
 const App = () => {
   useEffect(() => {
-    // @ts-ignore
-    window.particlesJS('bg-particles', {
+    tsParticles.load('tsparticles', {
       particles: {
         number: {
           value: 80,
@@ -95,8 +94,7 @@ const App = () => {
             distance: 400,
             size: 40,
             duration: 2,
-            opacity: 8,
-            speed: 3
+            opacity: 8
           },
           repulse: {
             distance: 200,
@@ -117,10 +115,7 @@ const App = () => {
   return (
     <div id='app' className='relative'>
       <AppContextProvider>
-        <div
-          id='bg-particles'
-          className='absolute w-full h-full top-0 left-0'
-        />
+        <div id='tsparticles' className='absolute w-full h-full top-0 left-0' />
         <Header />
         <Content>
           <Intro />
