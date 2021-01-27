@@ -10,7 +10,8 @@ import {
   IconLinkedin,
   DraculaName,
   DraculaString,
-  DraculaNumber
+  DraculaNumber,
+  FadeVisibility
 } from './Primitive';
 
 const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
@@ -75,7 +76,7 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
           love building web applications.
         </DraculaString>
       </div>
-      <div className='mt-20 text-center md:text-left'>
+      <FadeVisibility className='mt-20 text-center md:text-left'>
         <div className='avatar'>
           <img
             width={280}
@@ -98,7 +99,7 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
             </a>
           ))}
         </div>
-      </div>
+      </FadeVisibility>
       <div className='social-media'>
         <IconNpm href='https://www.npmjs.com/~ralphbliu' />
         <IconGithub href='https://github.com/LBrian' />
