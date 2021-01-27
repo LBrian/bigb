@@ -50,6 +50,12 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
       href: '',
       alt: 'vanillajs',
       image: 'vanillajs.png'
+    },
+    {
+      href:
+        'https://chrome.google.com/webstore/detail/stackla/coiffdkoeimkhbfobbbddndmnkjeefbe?hl=en',
+      alt: 'chrome',
+      image: 'chrome.png'
     }
   ];
 

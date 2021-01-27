@@ -138,6 +138,11 @@ body.dark .filter-drop-shadow {
     --tw-avatar-badge-top: 85px;
   }
 
+  .avatar > a:nth-child(8) {
+    --tw-avatar-badge-left: 240px;
+    --tw-avatar-badge-top: 150px;
+  }
+
   .avatar-badge {
     @apply absolute rounded-md opacity-40 transition-all duration-500 filter-drop-shadow;
     z-index: -1;
