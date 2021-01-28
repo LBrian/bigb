@@ -109,6 +109,11 @@ body.dark .filter-drop-shadow {
     @apply z-0 opacity-80;
   }
 
+  .avatar-badge:hover {
+    z-index: 1 !important;
+    width: 100px !important;
+  }
+
   .avatar > a:nth-child(2) {
     --tw-avatar-badge-top: 20px;
   }
