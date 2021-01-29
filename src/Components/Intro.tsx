@@ -24,7 +24,7 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
     {
       href: 'https://www.youracclaim.com/users/brian-yueh-peng-liu',
       alt: 'jslandia',
-      image: 'openjs-foundation-javascriptlandia.png'
+      image: 'openjs-foundation-javascriptlandia.jpg'
     },
     {
       href: 'https://iwed.brianypliu.com/',
@@ -44,7 +44,7 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
     {
       href: 'https://stackla.com/',
       alt: 'react',
-      image: 'react.png'
+      image: 'react.jpg'
     },
     {
       href: '',

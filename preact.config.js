@@ -14,6 +14,14 @@ module.exports = (config, env, helpers) => {
     plugin.plugin.patterns.push({ from: 'manifest.webmanifest' })
   });
 
+  // TODO: This will need to be revisited once need to use Router for code splitting
+  config.module.rules.forEach((rule) => {
+    if (rule.test.toString().includes('css|')) {
+      rule.use.shift();
+      rule.use.unshift('style-loader')
+    }
+  })
+
   // Modules import resolving paths
   config.resolve.modules.push('src');
 
