@@ -1,6 +1,8 @@
 import { h } from 'preact';
 import { useState, useEffect, createContext, FC } from 'preact/compat';
 
+import { notification } from './utils';
+
 const LOCAL_STORAGE_KEYS = {
   darkMode: 'bigb/darkMode'
 };
@@ -22,6 +24,21 @@ const AppContextProvider: FC = ({ children }) => {
       document.body.classList.remove('dark');
     }
   }, [darkMode]);
+
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistration().then((registration) => {
+        if (registration) {
+          registration.addEventListener('updatefound', () => {
+            notification(
+              'New updates!',
+              'Brian Liu just released new stuffs on his website, go explore it and feedback is welcome.'
+            );
+          });
+        }
+      });
+    }
+  }, []);
 
   return (
     <AppContext.Provider
