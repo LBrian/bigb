@@ -1,8 +1,6 @@
 import { h } from 'preact';
 import { useState, useEffect, createContext, FC } from 'preact/compat';
 
-import { notification } from './utils';
-
 const LOCAL_STORAGE_KEYS = {
   darkMode: 'bigb/darkMode'
 };
@@ -27,13 +25,17 @@ const AppContextProvider: FC = ({ children }) => {
 
   useEffect(() => {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistration().then((registration) => {
-        if (registration) {
-          registration.addEventListener('updatefound', () => {
-            notification(
-              'New updates!',
-              'Brian Liu just released new stuffs on his website, go explore it and feedback is welcome.'
-            );
+      // When a new SW is activated
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if ('Notification' in window) {
+          Notification.requestPermission().then((permission) => {
+            permission === 'granted' &&
+              new Notification('New SW updated!', {
+                vibrate: [300, 100, 400],
+                icon: '/assets/favicon-196.png',
+                body:
+                  'A new version of Service Worker has been updated automatically.'
+              });
           });
         }
       });
