@@ -56,6 +56,12 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
         'https://chrome.google.com/webstore/detail/stackla/coiffdkoeimkhbfobbbddndmnkjeefbe?hl=en',
       alt: 'chrome',
       image: 'chrome.png'
+    },
+    {
+      href:
+        'https://www.npmjs.com/package/app-template-sstt',
+      alt: 'svelte',
+      image: 'svelte.png'
     }
   ];
 
