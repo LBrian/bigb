@@ -27,7 +27,7 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
       image: 'openjs-foundation-javascriptlandia.jpg'
     },
     {
-      href: 'https://iwed.brianypliu.com/',
+      href: 'https://github.com/blitz-js/blitz#contributors-',
       alt: 'blitzjs',
       image: 'blitzjs.png'
     },
