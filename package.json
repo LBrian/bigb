@@ -36,7 +36,7 @@
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9.8.6",
-    "content-visibility": "^1.0.12",
+    "content-visibility": "^1.2.1",
     "postcss": "^7.0.35",
     "preact": "^10.5.11",
     "preact-render-to-string": "^5.1.12",

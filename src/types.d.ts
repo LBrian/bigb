@@ -7,11 +7,6 @@ declare module 'preact' {
         Partial<Pick<WiredToggle, 'checked' | 'disabled' | 'style'>> & {
           onchange?: (e: CustomEvent) => void;
         };
-      'content-visibility': HTMLAttributes<HTMLDivElement> &
-        PropsWithChildren<{
-          containIntrinsicSize?: string;
-          threshold?: number;
-        }>;
     }
   }
 }
