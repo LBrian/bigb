@@ -58,8 +58,7 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
       image: 'chrome.png'
     },
     {
-      href:
-        'https://www.npmjs.com/package/app-template-sstt',
+      href: 'https://da-ui.brianypliu.com/',
       alt: 'svelte',
       image: 'svelte.png'
     }
