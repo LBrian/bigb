@@ -1,13 +1,15 @@
-import { Card, Section, DraculaString } from './Primitive';
+import '@da-ui/card';
+import { Section, DraculaString } from './Primitive';
 
 const Career = () => {
   return (
     <Section align='right' title='Where I worked'>
-      <div className='cards'>
-        <Card
-          title='Front-end Engineer Team Lead'
-          imageSrc='/assets/images/stackla.png'>
-          <ul className='list-disc list-inside text-left'>
+      <da-card avatarAlt='Stackla' avatarSrc='/assets/images/stackla.png'>
+        <div className='p-8 w-full'>
+          <div className='filter-drop-shadow text-center text-xl mb-6'>
+            Front-end Engineer Team Lead
+          </div>
+          <ul className='list-disc list-inside text-left font-extralight text-sm'>
             <li>1st &#x1F1E6;&#x1F1FA; oversea job offer</li>
             <li>&#9883; ReactConf AU 2020</li>
             <li>
@@ -23,11 +25,16 @@ const Career = () => {
               <span>v1 integration</span>
             </li>
           </ul>
-        </Card>
-        <Card
-          title='Senior React Front-end Engineer'
-          imageSrc='/assets/images/tradeledger.png'>
-          <ul className='list-disc list-inside text-left'>
+        </div>
+      </da-card>
+      <da-card
+        avatarAlt='tradeledger'
+        avatarSrc='/assets/images/tradeledger.png'>
+        <div className='p-8 w-full'>
+          <div className='filter-drop-shadow text-center text-xl mb-6'>
+            Senior React Front-end Engineer
+          </div>
+          <ul className='list-disc list-inside text-left font-extralight text-sm'>
             <li>
               <span>Initiated Apollo GraphQL Subscription</span>
               <DraculaString className='mx-1'>WebSocket</DraculaString>
@@ -38,9 +45,14 @@ const Career = () => {
             <li>Established Friday Lego time &#x1F4A1;</li>
             <li>Established code quality first culture</li>
           </ul>
-        </Card>
-        <Card title='Front-end Engineer' imageSrc='/assets/images/line.png'>
-          <ul className='list-disc list-inside text-left'>
+        </div>
+      </da-card>
+      <da-card avatarAlt='line' avatarSrc='/assets/images/line.png'>
+        <div className='p-8 w-full'>
+          <div className='filter-drop-shadow text-center text-xl mb-6'>
+            Front-end Engineer
+          </div>
+          <ul className='list-disc list-inside text-left font-extralight text-sm'>
             <li>1st &#x1F1EF;&#x1F1F5; oversea job offer</li>
             <li>
               <span>Hello to</span>
@@ -51,11 +63,14 @@ const Career = () => {
             <li>Kaggle Machine Learning tech sharing</li>
             <li>I can speak some Japanese</li>
           </ul>
-        </Card>
-        <Card
-          title='Senior Full-stack Engineer'
-          imageSrc='/assets/images/formac.png'>
-          <ul className='list-disc list-inside text-left'>
+        </div>
+      </da-card>
+      <da-card avatarAlt='formac' avatarSrc='/assets/images/formac.png'>
+        <div className='p-8 w-full'>
+          <div className='filter-drop-shadow text-center text-xl mb-6'>
+            Senior Full-stack Engineer
+          </div>
+          <ul className='list-disc list-inside text-left font-extralight text-sm'>
             <li>1st &#x1F1EC;&#x1F1E7; oversea job offer</li>
             <li>Career turning point to front-end</li>
             <li>Data analysis in python</li>
@@ -64,11 +79,14 @@ const Career = () => {
               <DraculaString className='mx-1'>Angular.js</DraculaString>
             </li>
           </ul>
-        </Card>
-        <Card
-          title='Senior Software Engineer'
-          imageSrc='/assets/images/yahoo.png'>
-          <ul className='list-disc list-inside text-left'>
+        </div>
+      </da-card>
+      <da-card avatarAlt='yahoo' avatarSrc='/assets/images/yahoo.png'>
+        <div className='p-8 w-full'>
+          <div className='filter-drop-shadow text-center text-xl mb-6'>
+            Senior Software Engineer
+          </div>
+          <ul className='list-disc list-inside text-left font-extralight text-sm'>
             <li>
               <span>Hello to</span>
               <DraculaString className='mx-1'>Java</DraculaString>
@@ -78,11 +96,14 @@ const Career = () => {
             <li>Round-robin scrum master</li>
             <li>My first US IP/PATENT submissions</li>
           </ul>
-        </Card>
-        <Card
-          title='Senior Software Engineer in Test'
-          imageSrc='/assets/images/trendmicro.jpg'>
-          <ul className='list-disc list-inside text-left'>
+        </div>
+      </da-card>
+      <da-card avatarAlt='trendmicro' avatarSrc='/assets/images/trendmicro.jpg'>
+        <div className='p-8 w-full'>
+          <div className='filter-drop-shadow text-center text-xl mb-6'>
+            Senior Software Engineer in Test
+          </div>
+          <ul className='list-disc list-inside text-left font-extralight text-sm'>
             <li>Cisco IoT projects</li>
             <li>In-house test framework TMSTAF</li>
             <li>
@@ -93,8 +114,8 @@ const Career = () => {
             </li>
             <li>Automation coverage 96%</li>
           </ul>
-        </Card>
-      </div>
+        </div>
+      </da-card>
     </Section>
   );
 };

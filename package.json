@@ -34,6 +34,7 @@
     "sirv-cli": "1.0.3"
   },
   "dependencies": {
+    "@da-ui/card": "^0.1.12",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9.8.6",
     "content-visibility": "^1.2.1",

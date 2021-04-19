@@ -12,7 +12,7 @@ const DraculaString: FC<JSX.HTMLAttributes<HTMLSpanElement>> = ({
 
   return (
     <span
-      className={`${darkMode ? 'text-yellow' : 'text-blue-gray'} ${
+      className={`font-normal ${darkMode ? 'text-yellow' : 'text-blue-gray'} ${
         className ? className : ''
       }`}
       {...props}>

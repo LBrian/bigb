@@ -64,12 +64,6 @@ body.dark header.sticky {
 }
 
 body.dark [class*='shadow'],
-body.dark .flip-card-content,
-body.dark .flip-card-image > img {
-  --tw-shadow: 0 10px 15px -3px rgba(17, 236, 229, 0.2),
-    0 4px 6px -2px rgba(17, 236, 229, 0.2) !important;
-}
-
 body.dark .filter-drop-shadow {
   --tw-filter-drop-shadow: rgb(17, 236, 229);
 }
@@ -87,11 +81,6 @@ body.dark .filter-drop-shadow {
     .filter-drop-shadow {
       filter: drop-shadow(-2px 2px 2px var(--tw-filter-drop-shadow, #6272a4));
     }
-  }
-
-  .cards {
-    @apply grid gap-8 py-6 px-4;
-    justify-content: inherit;
   }
 
   .social-media {
@@ -158,49 +147,5 @@ body.dark .filter-drop-shadow {
     z-index: -1;
     top: var(--tw-avatar-badge-top, 0);
     left: var(--tw-avatar-badge-left, 0);
-  }
-
-  @screen md {
-    .cards {
-      --tw-grid-auto-fit-min: 24em;
-      @apply grid-cols-auto-fit;
-    }
-  }
-
-  .flip-card {
-    height: 480px;
-    perspective: 900px;
-    @apply relative w-full md:w-96 inline-block text-white;
-  }
-
-  .flip-card-content {
-    perspective: 900px;
-    animation: entry 1s linear 1;
-    transform: rotateX(45deg) scale(0.7);
-    --tw-shadow: 0 10px 15px -3px #6272a4, 0 4px 6px -2px #6272a4 !important;
-    @apply top-0 absolute w-full h-full duration-500 rounded-md flex flex-col overflow-hidden shadow-sm;
-  }
-
-  .flip-card-content.flip-card-in-view {
-    transform: rotate(0deg) scale(1);
-    @apply shadow-sm;
-  }
-
-  .flip-card-image > img {
-    --tw-shadow: 0 10px 15px -3px #6272a4, 0 4px 6px -2px #6272a4 !important;
-    @apply h-28 w-28 object-cover my-10 mx-auto rounded-3xl shadow-sm;
-  }
-
-  .flip-card-info {
-    @apply text-center flex-1 overflow-hidden flex flex-col mx-6;
-  }
-
-  .flip-card-title {
-    @apply font-mono text-xl;
-  }
-
-  .flip-card-description {
-    letter-spacing: 1px;
-    @apply text-sm sm:text-base my-5 box-border overflow-y-auto;
   }
 }
