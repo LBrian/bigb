@@ -1,7 +1,20 @@
 import '@da-ui/card';
+import { useMemo, useContext } from 'preact/hooks';
+
+import { AppContext } from 'AppContextProvider';
+
 import { Section, DraculaString } from './Primitive';
 
 const Career = () => {
+  const { darkMode } = useContext(AppContext);
+  const listClasses = useMemo(
+    () =>
+      `list-disc list-inside text-left font-extralight text-sm${
+        !darkMode ? ' text-dark-teal' : ''
+      }`,
+    [darkMode]
+  );
+
   return (
     <Section align='right' title='Where I worked'>
       <da-card avatarAlt='Stackla' avatarSrc='/assets/images/stackla.png'>
@@ -9,7 +22,7 @@ const Career = () => {
           <div className='filter-drop-shadow text-center text-xl mb-6'>
             Front-end Engineer Team Lead
           </div>
-          <ul className='list-disc list-inside text-left font-extralight text-sm'>
+          <ul className={listClasses}>
             <li>1st &#x1F1E6;&#x1F1FA; oversea job offer</li>
             <li>&#9883; ReactConf AU 2020</li>
             <li>
@@ -34,7 +47,7 @@ const Career = () => {
           <div className='filter-drop-shadow text-center text-xl mb-6'>
             Senior React Front-end Engineer
           </div>
-          <ul className='list-disc list-inside text-left font-extralight text-sm'>
+          <ul className={listClasses}>
             <li>
               <span>Initiated Apollo GraphQL Subscription</span>
               <DraculaString className='mx-1'>WebSocket</DraculaString>
@@ -52,7 +65,7 @@ const Career = () => {
           <div className='filter-drop-shadow text-center text-xl mb-6'>
             Front-end Engineer
           </div>
-          <ul className='list-disc list-inside text-left font-extralight text-sm'>
+          <ul className={listClasses}>
             <li>1st &#x1F1EF;&#x1F1F5; oversea job offer</li>
             <li>
               <span>Hello to</span>
@@ -70,7 +83,7 @@ const Career = () => {
           <div className='filter-drop-shadow text-center text-xl mb-6'>
             Senior Full-stack Engineer
           </div>
-          <ul className='list-disc list-inside text-left font-extralight text-sm'>
+          <ul className={listClasses}>
             <li>1st &#x1F1EC;&#x1F1E7; oversea job offer</li>
             <li>Career turning point to front-end</li>
             <li>Data analysis in python</li>
@@ -86,7 +99,7 @@ const Career = () => {
           <div className='filter-drop-shadow text-center text-xl mb-6'>
             Senior Software Engineer
           </div>
-          <ul className='list-disc list-inside text-left font-extralight text-sm'>
+          <ul className={listClasses}>
             <li>
               <span>Hello to</span>
               <DraculaString className='mx-1'>Java</DraculaString>
@@ -103,7 +116,7 @@ const Career = () => {
           <div className='filter-drop-shadow text-center text-xl mb-6'>
             Senior Software Engineer in Test
           </div>
-          <ul className='list-disc list-inside text-left font-extralight text-sm'>
+          <ul className={listClasses}>
             <li>Cisco IoT projects</li>
             <li>In-house test framework TMSTAF</li>
             <li>
