@@ -17,7 +17,10 @@ const Career = () => {
 
   return (
     <Section align='right' title='Where I worked'>
-      <da-card avatarAlt='Stackla' avatarSrc='/assets/images/stackla.png'>
+      <da-card
+        width='380px'
+        avatarAlt='Stackla'
+        avatarSrc='/assets/images/stackla.png'>
         <div className='p-8 w-full'>
           <div className='filter-drop-shadow text-center text-xl mb-6'>
             Front-end Engineer Team Lead
@@ -41,6 +44,7 @@ const Career = () => {
         </div>
       </da-card>
       <da-card
+        width='380px'
         avatarAlt='tradeledger'
         avatarSrc='/assets/images/tradeledger.png'>
         <div className='p-8 w-full'>
@@ -60,7 +64,10 @@ const Career = () => {
           </ul>
         </div>
       </da-card>
-      <da-card avatarAlt='line' avatarSrc='/assets/images/line.png'>
+      <da-card
+        width='380px'
+        avatarAlt='line'
+        avatarSrc='/assets/images/line.png'>
         <div className='p-8 w-full'>
           <div className='filter-drop-shadow text-center text-xl mb-6'>
             Front-end Engineer
@@ -78,7 +85,10 @@ const Career = () => {
           </ul>
         </div>
       </da-card>
-      <da-card avatarAlt='formac' avatarSrc='/assets/images/formac.png'>
+      <da-card
+        width='380px'
+        avatarAlt='formac'
+        avatarSrc='/assets/images/formac.png'>
         <div className='p-8 w-full'>
           <div className='filter-drop-shadow text-center text-xl mb-6'>
             Senior Full-stack Engineer
@@ -94,7 +104,10 @@ const Career = () => {
           </ul>
         </div>
       </da-card>
-      <da-card avatarAlt='yahoo' avatarSrc='/assets/images/yahoo.png'>
+      <da-card
+        width='380px'
+        avatarAlt='yahoo'
+        avatarSrc='/assets/images/yahoo.png'>
         <div className='p-8 w-full'>
           <div className='filter-drop-shadow text-center text-xl mb-6'>
             Senior Software Engineer
@@ -111,7 +124,10 @@ const Career = () => {
           </ul>
         </div>
       </da-card>
-      <da-card avatarAlt='trendmicro' avatarSrc='/assets/images/trendmicro.jpg'>
+      <da-card
+        width='380px'
+        avatarAlt='trendmicro'
+        avatarSrc='/assets/images/trendmicro.jpg'>
         <div className='p-8 w-full'>
           <div className='filter-drop-shadow text-center text-xl mb-6'>
             Senior Software Engineer in Test
