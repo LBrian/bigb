@@ -9,7 +9,6 @@ import {
   IconTwitter,
   IconLinkedin,
   DraculaName,
-  DraculaString,
   FadeVisibility
 } from './Primitive';
 
