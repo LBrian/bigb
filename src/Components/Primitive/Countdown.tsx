@@ -14,7 +14,7 @@ const Countdown = ({
   return (
     <div
       {...rest}
-      className={`flex flex-col p-2 bg-neutral rounded-md text-neutral-content text-2xs ${className}`}>
+      className={`flex flex-col p-2 bg-neutral rounded-md text-neutral-content text-2xs shadow-lg ${className}`}>
       <span className='font-mono text-2xl countdown font-semibold'>
         <span style={`--value:${value}`} />
       </span>

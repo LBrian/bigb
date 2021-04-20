@@ -71,7 +71,7 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
         </DraculaName>
       </div>
 
-      <div className='md:max-w-2xl text-justify font-light md:text-lg mockup-code'>
+      <div className='md:max-w-2xl text-justify font-light md:text-lg mockup-code shadow-xl'>
         <pre data-prefix='~' className='text-sm'>
           echo $email
         </pre>
