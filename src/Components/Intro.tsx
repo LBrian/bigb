@@ -82,14 +82,14 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
         <pre data-prefix='~' className='text-sm'>
           echo $title
         </pre>
-        <pre data-prefix='>' className='text-sm text-green'>
+        <pre data-prefix='>' className='text-sm text-purple'>
           Senior Front-End Engineer
         </pre>
         <pre data-prefix='~' className='text-sm' />
         <pre data-prefix='~' className='text-sm'>
           echo $location
         </pre>
-        <pre data-prefix='>' className='text-sm text-green'>
+        <pre data-prefix='>' className='text-sm text-pink'>
           Sydney, NSW, Australia &#129432;
         </pre>
         <pre data-prefix='~' className='text-sm' />
@@ -103,22 +103,22 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
         <pre data-prefix='~' className='text-sm'>
           echo $experience
         </pre>
-        <pre data-prefix='>' className='text-sm text-green'>
+        <pre data-prefix='>' className='text-sm text-yellow'>
           Front-end Developer
         </pre>
-        <pre data-prefix='>' className='text-sm text-green'>
+        <pre data-prefix='>' className='text-sm text-yellow'>
           Backend Developer
         </pre>
-        <pre data-prefix='>' className='text-sm text-green'>
+        <pre data-prefix='>' className='text-sm text-yellow'>
           Data Mining (academic)
         </pre>
-        <pre data-prefix='>' className='text-sm text-green'>
+        <pre data-prefix='>' className='text-sm text-yellow'>
           Software Engineer
         </pre>
-        <pre data-prefix='>' className='text-sm text-green'>
+        <pre data-prefix='>' className='text-sm text-yellow'>
           Software Engineer in Test
         </pre>
-        <pre data-prefix='>' className='text-sm text-green'>
+        <pre data-prefix='>' className='text-sm text-yellow'>
           Linux System Admin
         </pre>
       </div>
