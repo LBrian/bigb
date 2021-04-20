@@ -72,14 +72,56 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
         </DraculaName>
       </div>
 
-      <div className='md:max-w-2xl text-justify font-light md:text-lg'>
-        <DraculaString>
-          I&apos;m a Senior Front-End Engineer based in Sydney, NSW, Australia
-          &#129432;. My professional experience across the continents shaped me
-          with unique soft/hard skills and broaden vision. From Linux Sys Admin,
-          SD, SDET, Back-End Developer and Data Mining academic level, now I
-          specifically love building web applications.
-        </DraculaString>
+      <div className='md:max-w-2xl text-justify font-light md:text-lg mockup-code'>
+        <pre data-prefix='~' className='text-sm'>
+          echo $email
+        </pre>
+        <pre data-prefix='>' className='text-sm text-neon-blue underline'>
+          ralphbliu@gmail.com
+        </pre>
+        <pre data-prefix='~' className='text-sm' />
+        <pre data-prefix='~' className='text-sm'>
+          echo $title
+        </pre>
+        <pre data-prefix='>' className='text-sm text-green'>
+          Senior Front-End Engineer
+        </pre>
+        <pre data-prefix='~' className='text-sm' />
+        <pre data-prefix='~' className='text-sm'>
+          echo $location
+        </pre>
+        <pre data-prefix='>' className='text-sm text-green'>
+          Sydney, NSW, Australia &#129432;
+        </pre>
+        <pre data-prefix='~' className='text-sm' />
+        <pre data-prefix='~' className='text-sm'>
+          echo $passions
+        </pre>
+        <pre data-prefix='>' className='text-sm text-green'>
+          Building web applications
+        </pre>
+        <pre data-prefix='~' className='text-sm' />
+        <pre data-prefix='~' className='text-sm'>
+          echo $experience
+        </pre>
+        <pre data-prefix='>' className='text-sm text-green'>
+          Front-end Developer
+        </pre>
+        <pre data-prefix='>' className='text-sm text-green'>
+          Backend Developer
+        </pre>
+        <pre data-prefix='>' className='text-sm text-green'>
+          Data Mining (academic)
+        </pre>
+        <pre data-prefix='>' className='text-sm text-green'>
+          Software Engineer
+        </pre>
+        <pre data-prefix='>' className='text-sm text-green'>
+          Software Engineer in Test
+        </pre>
+        <pre data-prefix='>' className='text-sm text-green'>
+          Linux System Admin
+        </pre>
       </div>
       <FadeVisibility className='mt-20 text-center md:text-left'>
         <div className='b-avatar'>
