@@ -88,61 +88,61 @@ body.dark .filter-drop-shadow {
     @apply grid gap-6 pt-16 grid-cols-auto-fit justify-center md:justify-start;
   }
 
-  .avatar {
+  .b-avatar {
     @apply relative inline-block;
   }
 
-  .avatar:hover .avatar-badge {
+  .b-avatar:hover .b-avatar-badge {
     width: 80px;
     margin-left: -10px;
     @apply z-0 opacity-80;
   }
 
-  .avatar-badge:hover {
+  .b-avatar-badge:hover {
     z-index: 1 !important;
     width: 100px !important;
   }
 
-  .avatar > a:nth-child(2) {
+  .b-avatar > a:nth-child(2) {
     --tw-avatar-badge-top: 20px;
   }
 
-  .avatar > a:nth-child(3) {
+  .b-avatar > a:nth-child(3) {
     --tw-avatar-badge-left: 55px;
     --tw-avatar-badge-top: -25px;
   }
 
-  .avatar > a:nth-child(4) {
+  .b-avatar > a:nth-child(4) {
     --tw-avatar-badge-left: 120px;
     --tw-avatar-badge-top: -40px;
   }
 
-  .avatar > a:nth-child(5) {
+  .b-avatar > a:nth-child(5) {
     --tw-avatar-badge-left: 180px;
     --tw-avatar-badge-top: -25px;
   }
 
-  .avatar > a:nth-child(6) {
+  .b-avatar > a:nth-child(6) {
     --tw-avatar-badge-left: 230px;
     --tw-avatar-badge-top: 20px;
   }
 
-  .avatar > a:nth-child(7) {
+  .b-avatar > a:nth-child(7) {
     --tw-avatar-badge-left: 240px;
     --tw-avatar-badge-top: 85px;
   }
 
-  .avatar > a:nth-child(8) {
+  .b-avatar > a:nth-child(8) {
     --tw-avatar-badge-left: 240px;
     --tw-avatar-badge-top: 150px;
   }
 
-  .avatar > a:nth-child(9) {
+  .b-avatar > a:nth-child(9) {
     --tw-avatar-badge-left: 210px;
     --tw-avatar-badge-top: 210px;
   }
 
-  .avatar-badge {
+  .b-avatar-badge {
     @apply absolute rounded-md opacity-40 transition-all duration-500 filter-drop-shadow;
     z-index: -1;
     top: var(--tw-avatar-badge-top, 0);

@@ -1,11 +1,15 @@
 import '@da-ui/card';
-import { useMemo, useContext } from 'preact/hooks';
+import { useMemo, useEffect, useState, useContext } from 'preact/hooks';
 
 import { AppContext } from 'AppContextProvider';
 
-import { Section, DraculaString } from './Primitive';
+import { Section, DraculaString, DraculaNumber, Countdown } from './Primitive';
 
 const Career = () => {
+  const careerStart = new Date('2005-05-01T00:00:00Z');
+  const [current, setCurrent] = useState(
+    new Date(Date.now() - careerStart.getTime())
+  );
   const { darkMode } = useContext(AppContext);
   const listClasses = useMemo(
     () =>
@@ -15,18 +19,93 @@ const Career = () => {
     [darkMode]
   );
 
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrent(new Date(Date.now() - careerStart.getTime()));
+    }, 1000);
+
+    return () => {
+      clearInterval(id);
+    };
+  }, []);
+
   return (
     <Section align='right' title='Where I worked'>
+      <div className='grid grid-flow-col gap-1 sm:gap-4 text-center auto-cols-max pb-10 justify-start md:justify-end'>
+        <Countdown
+          label='yrs'
+          value={Math.abs(current.getUTCFullYear() - 1970)}
+        />
+        <Countdown label='mon' value={current.getMonth()} />
+        <Countdown label='day' value={current.getDay()} />
+        <Countdown label='hrs' value={current.getHours()} />
+        <Countdown label='min' value={current.getMinutes()} />
+        <Countdown label='sec' value={current.getSeconds()} />
+      </div>
+      <da-card
+        width='380px'
+        avatarAlt='SafetyCulture'
+        avatarSrc='/assets/images/safetyculture.png'>
+        <div className='p-8 w-full'>
+          <div className='filter-drop-shadow text-center text-xl mb-6'>
+            EdApp Snr Front-end Engineer &#x1F1E6;&#x1F1FA;
+          </div>
+          <ul className={listClasses}>
+            <li>&#9883; React Summit 2021</li>
+            <li>
+              <DraculaString className='mx-1'>coffeescript</DraculaString>bundle
+              size
+              <DraculaNumber
+                value={45}
+                className='mx-1'
+                options={{ style: 'unit', unit: 'percent' }}
+              />
+              &#x2B07;
+            </li>
+            <li>
+              <DraculaString className='mx-1'>HTML</DraculaString>document
+              response time
+              <DraculaNumber
+                value={50}
+                className='mx-1'
+                options={{ style: 'unit', unit: 'percent' }}
+              />
+              &#x2B07;
+            </li>
+            <li>
+              <DraculaString className='mx-1'>DOMContentLoad</DraculaString>
+              load time
+              <DraculaNumber
+                value={60}
+                className='mx-1'
+                options={{ style: 'unit', unit: 'percent' }}
+              />
+              &#x2B07;
+            </li>
+            <li>Refactored/deprecated DS components</li>
+            <li>
+              POC
+              <DraculaString className='mx-1'>Preact</DraculaString>to reduce
+              migration
+              <DraculaNumber
+                value={15}
+                className='mx-1'
+                options={{ style: 'unit', unit: 'percent' }}
+              />
+              &#x2B07;
+            </li>
+          </ul>
+        </div>
+      </da-card>
       <da-card
         width='380px'
         avatarAlt='Stackla'
         avatarSrc='/assets/images/stackla.png'>
         <div className='p-8 w-full'>
           <div className='filter-drop-shadow text-center text-xl mb-6'>
-            Front-end Engineer Team Lead
+            Front-end Engineer Team Lead &#x1F1E6;&#x1F1FA;
           </div>
           <ul className={listClasses}>
-            <li>1st &#x1F1E6;&#x1F1FA; oversea job offer</li>
             <li>&#9883; ReactConf AU 2020</li>
             <li>
               <span>Stackla Chrome Extension</span>
@@ -49,18 +128,27 @@ const Career = () => {
         avatarSrc='/assets/images/tradeledger.png'>
         <div className='p-8 w-full'>
           <div className='filter-drop-shadow text-center text-xl mb-6'>
-            Senior React Front-end Engineer
+            Snr React Front-end Engineer &#x1F1E6;&#x1F1FA;
           </div>
           <ul className={listClasses}>
             <li>
-              <span>Initiated Apollo GraphQL Subscription</span>
-              <DraculaString className='mx-1'>WebSocket</DraculaString>
-              <span>projects</span>
+              Web app performance
+              <DraculaNumber
+                value={60}
+                className='mx-1'
+                options={{ style: 'unit', unit: 'percent' }}
+              />
+              &#x2B06;
             </li>
-            <li>Boosted app performance 50%</li>
             <li>Established Dev standards and docs</li>
-            <li>Established Friday Lego time &#x1F4A1;</li>
             <li>Established code quality first culture</li>
+            <li>Initiated Friday Lego (Innovation) time &#x1F4A1;</li>
+            <li>
+              <span>
+                Built real-time web app by Apollo GraphQL Subscription
+              </span>
+              <DraculaString className='mx-1'>(WebSocket)</DraculaString>
+            </li>
           </ul>
         </div>
       </da-card>
@@ -70,18 +158,18 @@ const Career = () => {
         avatarSrc='/assets/images/line.png'>
         <div className='p-8 w-full'>
           <div className='filter-drop-shadow text-center text-xl mb-6'>
-            Front-end Engineer
+            Front-end Engineer &#x1F1EF;&#x1F1F5;
           </div>
           <ul className={listClasses}>
-            <li>1st &#x1F1EF;&#x1F1F5; oversea job offer</li>
+            <li>In-app webview projects</li>
+            <li>Kaggle Machine Learning tech sharing</li>
             <li>
-              <span>Hello to</span>
+              &#x1F644; &#x1F635;
               <DraculaString className='mx-1'>Knokout.js</DraculaString>
               <span>and</span>
               <DraculaString className='mx-1'>Backbone.js</DraculaString>
             </li>
-            <li>Kaggle Machine Learning tech sharing</li>
-            <li>I can speak some Japanese</li>
+            <li>Upside is I learnt Japanese</li>
           </ul>
         </div>
       </da-card>
@@ -91,14 +179,16 @@ const Career = () => {
         avatarSrc='/assets/images/formac.png'>
         <div className='p-8 w-full'>
           <div className='filter-drop-shadow text-center text-xl mb-6'>
-            Senior Full-stack Engineer
+            Snr Full-stack Engineer &#x1F1EC;&#x1F1E7;
           </div>
           <ul className={listClasses}>
-            <li>1st &#x1F1EC;&#x1F1E7; oversea job offer</li>
-            <li>Career turning point to front-end</li>
-            <li>Data analysis in python</li>
+            <li>Career turning point to Front-end</li>
             <li>
-              <span>Hello to</span>
+              Data mining in
+              <DraculaString className='mx-1'>Python</DraculaString>
+            </li>
+            <li>
+              My first project in
               <DraculaString className='mx-1'>Angular.js</DraculaString>
             </li>
           </ul>
@@ -110,16 +200,15 @@ const Career = () => {
         avatarSrc='/assets/images/yahoo.png'>
         <div className='p-8 w-full'>
           <div className='filter-drop-shadow text-center text-xl mb-6'>
-            Senior Software Engineer
+            Snr Software Engineer &#x1F1F9;&#x1F1FC;
           </div>
           <ul className={listClasses}>
             <li>
-              <span>Hello to</span>
+              Yahoo e-commerce search engine in
               <DraculaString className='mx-1'>Java</DraculaString>
             </li>
-            <li>Yahoo e-commerce search engine</li>
-            <li>Search engine + ML models</li>
-            <li>Round-robin scrum master</li>
+            <li>ML models integration</li>
+            <li>Scrum master, TDD</li>
             <li>My first US IP/PATENT submissions</li>
           </ul>
         </div>
@@ -130,18 +219,30 @@ const Career = () => {
         avatarSrc='/assets/images/trendmicro.jpg'>
         <div className='p-8 w-full'>
           <div className='filter-drop-shadow text-center text-xl mb-6'>
-            Senior Software Engineer in Test
+            Snr Software Engineer in Test &#x1F1F9;&#x1F1FC;
           </div>
           <ul className={listClasses}>
-            <li>Cisco IoT projects</li>
-            <li>In-house test framework TMSTAF</li>
+            <li>
+              Cisco<DraculaString className='mx-1'>IoT</DraculaString>projects
+            </li>
+            <li>
+              In-house test framework
+              <DraculaString className='mx-1'>TMSTAF</DraculaString>
+            </li>
             <li>
               <span>Hello to</span>
               <DraculaString className='mx-1'>Python</DraculaString>
               <span>and</span>
               <DraculaString className='mx-1'>Selenium</DraculaString>
             </li>
-            <li>Automation coverage 96%</li>
+            <li>
+              Automation coverage{' '}
+              <DraculaNumber
+                value={96}
+                className='mx-1'
+                options={{ style: 'unit', unit: 'percent' }}
+              />
+            </li>
           </ul>
         </div>
       </da-card>

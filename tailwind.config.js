@@ -23,11 +23,12 @@ module.exports = {
       pink: '#ff79c6',
       purple: '#bd93f9',
       red: '#ff5555',
-      yellow: '#f1fa8c'
+      yellow: '#f1fa8c',
+      ...require('daisyui/colors')
     }
   },
   variants: {
     extend: {}
   },
-  plugins: []
+  plugins: [require('daisyui')]
 };

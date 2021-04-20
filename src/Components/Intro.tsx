@@ -10,16 +10,10 @@ import {
   IconLinkedin,
   DraculaName,
   DraculaString,
-  DraculaNumber,
   FadeVisibility
 } from './Primitive';
 
 const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
-  const careerStart = new Date('2005-05-01T00:00:00Z');
-  const careerTimePeriod = new Date(
-    new Date().getTime() - careerStart.getTime()
-  );
-  const years = careerTimePeriod.getFullYear() - 1971;
   const badges = [
     {
       href: 'https://www.youracclaim.com/users/brian-yueh-peng-liu',
@@ -77,18 +71,18 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
           I love building web applications from Javascript.
         </DraculaName>
       </div>
+
       <div className='md:max-w-2xl text-justify font-light md:text-lg'>
         <DraculaString>
-          I&apos;m a senior Front-End Engineer based in Sydney, NSW, Australia
-          &#129432;. <DraculaNumber value={years} /> years professional
-          experience in software across the continents shaped me with unique
-          soft/hard skills and broaden vision. From Linux Sys Admin, SD, SDET,
-          Back-End Developer and Data Mining academic level, now I specifically
-          love building web applications.
+          I&apos;m a Senior Front-End Engineer based in Sydney, NSW, Australia
+          &#129432;. My professional experience across the continents shaped me
+          with unique soft/hard skills and broaden vision. From Linux Sys Admin,
+          SD, SDET, Back-End Developer and Data Mining academic level, now I
+          specifically love building web applications.
         </DraculaString>
       </div>
       <FadeVisibility className='mt-20 text-center md:text-left'>
-        <div className='avatar'>
+        <div className='b-avatar'>
           <img
             width={280}
             height={280}
@@ -104,7 +98,7 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
                 height={60}
                 loading='lazy'
                 alt={alt}
-                className='avatar-badge'
+                className='b-avatar-badge'
                 src={`/assets/images/${image}`}
               />
             </a>
