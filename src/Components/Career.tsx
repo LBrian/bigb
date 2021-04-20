@@ -56,9 +56,9 @@ const Career = () => {
               <DraculaString className='mx-1'>coffeescript</DraculaString>bundle
               size
               <DraculaNumber
-                value={45}
+                value={0.45}
                 className='mx-1'
-                options={{ style: 'unit', unit: 'percent' }}
+                options={{ style: 'percent' }}
               />
               &#x2B07;
             </li>
@@ -66,9 +66,9 @@ const Career = () => {
               <DraculaString className='mx-1'>HTML</DraculaString>document
               response time
               <DraculaNumber
-                value={50}
+                value={0.5}
                 className='mx-1'
-                options={{ style: 'unit', unit: 'percent' }}
+                options={{ style: 'percent' }}
               />
               &#x2B07;
             </li>
@@ -76,9 +76,9 @@ const Career = () => {
               <DraculaString className='mx-1'>DOMContentLoad</DraculaString>
               load time
               <DraculaNumber
-                value={60}
+                value={0.6}
                 className='mx-1'
-                options={{ style: 'unit', unit: 'percent' }}
+                options={{ style: 'percent' }}
               />
               &#x2B07;
             </li>
@@ -88,9 +88,9 @@ const Career = () => {
               <DraculaString className='mx-1'>Preact</DraculaString>to reduce
               migration
               <DraculaNumber
-                value={15}
+                value={0.15}
                 className='mx-1'
-                options={{ style: 'unit', unit: 'percent' }}
+                options={{ style: 'percent' }}
               />
               &#x2B07;
             </li>
@@ -134,9 +134,9 @@ const Career = () => {
             <li>
               Web app performance
               <DraculaNumber
-                value={60}
+                value={0.6}
                 className='mx-1'
-                options={{ style: 'unit', unit: 'percent' }}
+                options={{ style: 'percent' }}
               />
               &#x2B06;
             </li>
@@ -238,9 +238,9 @@ const Career = () => {
             <li>
               Automation coverage{' '}
               <DraculaNumber
-                value={96}
+                value={0.96}
                 className='mx-1'
-                options={{ style: 'unit', unit: 'percent' }}
+                options={{ style: 'percent' }}
               />
             </li>
           </ul>
