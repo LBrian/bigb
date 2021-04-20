@@ -13,7 +13,7 @@ const Career = () => {
   const { darkMode } = useContext(AppContext);
   const listClasses = useMemo(
     () =>
-      `list-disc list-inside text-left font-extralight text-sm${
+      `list-disc list-inside text-left font-extralight text-sm ${
         !darkMode ? ' text-dark-teal' : ''
       }`,
     [darkMode]
