@@ -1,4 +1,3 @@
-import 'wired-toggle';
 import { h } from 'preact';
 import { useContext } from 'preact/hooks';
 
@@ -19,7 +18,19 @@ const Header = () => {
           src='/assets/icons/apple-icon-180.png'
         />
       </div>
-      <wired-toggle checked={darkMode} onchange={toggleDarkMode} />
+      <div class='form-control'>
+        <label class='cursor-pointer label'>
+          <div>
+            <input
+              type='checkbox'
+              checked={darkMode}
+              onChange={toggleDarkMode}
+              class='toggle toggle-accent'
+            />
+            <span class='toggle-mark' />
+          </div>
+        </label>
+      </div>
     </header>
   );
 };
