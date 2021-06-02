@@ -16,17 +16,22 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
   const badges = [
     {
       href: 'https://www.youracclaim.com/users/brian-yueh-peng-liu',
-      alt: 'jslandia',
+      alt: 'OpenJS Foundation member',
       image: 'openjs-foundation-javascriptlandia.jpg'
     },
     {
       href: 'https://github.com/blitz-js/blitz#contributors-',
-      alt: 'blitzjs',
+      alt: 'blitz.js contributor',
       image: 'blitzjs.png'
     },
     {
+      href: 'https://github.com/redwoodjs/redwood#all-contributors',
+      alt: 'RedwoodJS contributor',
+      image: 'redwood.svg'
+    },
+    {
       href: 'https://www.webcomponents.org/author/LBrian',
-      alt: 'webcomponent',
+      alt: 'webcomponents contributor',
       image: 'webcomponent-192x192.png'
     },
     {
@@ -36,7 +41,7 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
     },
     {
       href: 'https://stackla.com/',
-      alt: 'react',
+      alt: 'Stackla UGC',
       image: 'react.jpg'
     },
     {
@@ -47,12 +52,12 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
     {
       href:
         'https://chrome.google.com/webstore/detail/stackla/coiffdkoeimkhbfobbbddndmnkjeefbe?hl=en',
-      alt: 'chrome',
+      alt: 'Stackla Chrome Extension',
       image: 'chrome.png'
     },
     {
       href: 'https://da-ui.brianypliu.com/',
-      alt: 'svelte',
+      alt: 'Svelte open-source project',
       image: 'svelte.png'
     }
   ];
@@ -80,10 +85,10 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
         </pre>
         <pre data-prefix='~' className='text-sm' />
         <pre data-prefix='~' className='text-sm'>
-          echo $title
+          echo $whoami
         </pre>
         <pre data-prefix='>' className='text-sm text-purple'>
-          Senior Front-End Engineer
+          Snr Software Engineer
         </pre>
         <pre data-prefix='~' className='text-sm' />
         <pre data-prefix='~' className='text-sm'>
@@ -97,7 +102,7 @@ const Intro: FC<JSX.HTMLAttributes<HTMLDivElement>> = (props) => {
           echo $passions
         </pre>
         <pre data-prefix='>' className='text-sm text-green'>
-          Building web applications
+          Javascript and Web technologies
         </pre>
         <pre data-prefix='~' className='text-sm' />
         <pre data-prefix='~' className='text-sm'>

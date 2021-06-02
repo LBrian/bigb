@@ -128,18 +128,23 @@ body.dark .filter-drop-shadow {
   }
 
   .b-avatar > a:nth-child(7) {
-    --tw-avatar-badge-left: 240px;
+    --tw-avatar-badge-left: 260px;
     --tw-avatar-badge-top: 85px;
   }
 
   .b-avatar > a:nth-child(8) {
-    --tw-avatar-badge-left: 240px;
+    --tw-avatar-badge-left: 260px;
     --tw-avatar-badge-top: 150px;
   }
 
   .b-avatar > a:nth-child(9) {
-    --tw-avatar-badge-left: 210px;
-    --tw-avatar-badge-top: 210px;
+    --tw-avatar-badge-left: 240px;
+    --tw-avatar-badge-top: 205px;
+  }
+
+  .b-avatar > a:nth-child(10) {
+    --tw-avatar-badge-left: 180px;
+    --tw-avatar-badge-top: 240px;
   }
 
   .b-avatar-badge {
